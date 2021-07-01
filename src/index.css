@@ -11,3 +11,323 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  min-width: 700px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 80%;
+  min-width: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #f7c089;
+  margin: 0px
+}
+
+h2 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f7c089;
+  margin: 0px
+}
+
+h3 {
+  font-family: 'Prompt', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #f7c089;
+  margin: 0px
+}
+
+.nav {
+  background-color: rgba(255, 255, 255, 0.605);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav img {
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+.nav-links-container {
+  margin-right: 2%;
+}
+
+.nav-link {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family: 'Prompt', sans-serif;
+  font-size: 2rem;
+  color: #f7c089;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #e6aa6e;
+}
+
+.landing {
+  display: flex;
+  align-items: center;
+  margin-top: -20%;
+  margin-left: 10%;
+}
+
+.hi p {
+  font-family: 'Prompt', sans-serif;
+  font-size: 20rem;
+  color: #f7c089;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.intro {
+  margin-left: 5%;
+}
+
+.intro p {
+  margin: 0;
+  width: 80%;
+}
+
+.intro-name {
+  font-family: 'Prompt', sans-serif;
+  font-size: 4rem;
+  color: #bababa;
+  margin: 0px;
+  font-weight: 400;
+}
+
+.intro-title {
+  font-family: 'Prompt', sans-serif;
+  font-size: 4rem;
+  line-height: 70px;
+  color: #d6d6d6;
+  margin: 0px;
+  font-weight: 400;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bio-container {
+  display: flex;
+  align-items: center;
+  margin-left: 12rem;
+  margin-right: 5rem
+}
+
+.selfie {
+  border-radius: 50%;
+  box-shadow: 0px 0px 100px -30px rgba(70, 70, 70, 0.701);
+  max-height: 32rem;
+}
+
+.bio {
+  margin-left: 5%;
+  width: 50%;
+}
+
+.bio p {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.7rem;
+  color: #848484;
+  margin: 0px;
+  font-weight: 350;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  line-height: 130%;
+}
+
+.inline-link {
+  color: #f7c089;
+  text-decoration: none;
+  
+}
+
+.inline-link:hover {
+color: #e6aa6e;
+}
+
+.tools {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.tools-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.tools-icons img {
+  height: 3.5rem;
+  opacity: 0.75;
+  margin: 2%;
+}
+
+.tools-icons img:hover {
+  opacity: 1;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects h1 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.line {
+  border-bottom: 1px solid #f7c089;
+  margin-bottom: 2rem;
+  width: 75%;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.project-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.project-info {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.proj-screen {
+  max-height: 25rem;
+  box-shadow: 0px 0px 100px -30px rgba(70, 70, 70, 0.701);
+}
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gh-icon {
+  height: 3.5rem;
+  opacity: .75;
+}
+
+.gh-icon:hover {
+  opacity: 1;
+}
+
+.project-info p {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.7rem;
+  color: #848484;
+  margin: 0px;
+  font-weight: 350;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  line-height: 130%;
+}
+
+.project-info a {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.7rem;
+  color: #f7c089;
+  text-decoration: none;
+}
+
+.project-info a:hover {
+  color: #e6aa6e;
+}
+
+.project-tech {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.built-with {
+  font-family: 'Prompt', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #848484;
+}
+
+.project-tech p {
+  font-size: 1.2rem;
+}
+
+.align-right {
+  text-align: right;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact span {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.7rem;
+  color: #848484;
+  margin-top: 6rem;
+  font-weight: 350;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  line-height: 130%;
+}
+
+.socials {
+  margin-top: 6rem;
+}
+
+.social-icons {
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.social-icons a img {
+  height: 3.5rem;
+  opacity: 0.75;
+  margin: 2%;
+}
+
+.social-icons a img:hover {
+  opacity: 1;
+}
+
+.footer {
+  text-align: center;
+  font-family: 'Prompt', sans-serif;
+  font-size: 1rem;
+  color: #b1b1b1;
+}
