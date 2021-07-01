@@ -1,19 +1,22 @@
 function Contact() {
     return(
-        <div className="section">
-            <div className="contact">
-                <h1>Want to know more?</h1>
-                <span>Feel free to <a href="http://localhost:3000" className="inline-link">peep the resume</a>, <a href="https://zachkaigler.medium.com/" className="inline-link" target="blank">check out my blog</a>, or <a href="mailto: zjkaig@gmail.com" className="inline-link">shoot me an email</a>.</span>
-                <div className="socials">
-                    <span>You can also find me on any of these fine platforms:</span>
-                    <div className="social-icons">
-                        <a href="https://github.com/zachkaigler" target="blank"><img src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a> 
-                        <a href="https://www.linkedin.com/in/zachkaigler/" target="blank"><img src="https://i.imgur.com/gTRf2NZ.png" alt="linkedin"/></a>
-                        <a href="https://www.instagram.com/zkaigz/" target="blank"><img src="https://i.imgur.com/BgBb1Qd.png" alt="instagram"/></a>
+        // eslint-disable-next-line
+        <a id="contact">
+            <div className="section">
+                <div className="contact">
+                    <h1>Want to know more?</h1>
+                    <span>Feel free to <a href="http://localhost:3000" className="inline-link">peep the resume</a>, <a href="https://zachkaigler.medium.com/" className="inline-link" target="blank">check out my blog</a>, or <a href="mailto: zjkaig@gmail.com" className="inline-link">shoot me an email</a>.</span>
+                    <div className="socials">
+                        <span>You can also find me on any of these fine platforms:</span>
+                        <div className="social-icons">
+                            <a href="https://github.com/zachkaigler" target="blank"><img src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a> 
+                            <a href="https://www.linkedin.com/in/zachkaigler/" target="blank"><img src="https://i.imgur.com/gTRf2NZ.png" alt="linkedin"/></a>
+                            <a href="https://www.instagram.com/zkaigz/" target="blank"><img src="https://i.imgur.com/BgBb1Qd.png" alt="instagram"/></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     )
 }
 
