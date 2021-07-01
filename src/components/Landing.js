@@ -1,7 +1,6 @@
 function Landing() {
     return(
-        // eslint-disable-next-line
-        <a id="main">
+        <section id="main">
             <div className="section">
                 <div className="landing">
                     <div className="hi">
@@ -13,7 +12,7 @@ function Landing() {
                     </div>
                 </div>
             </div>
-        </a>
+        </section>
     )
 }
 

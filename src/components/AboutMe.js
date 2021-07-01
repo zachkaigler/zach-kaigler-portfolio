@@ -1,7 +1,6 @@
 function AboutMe() {
     return(
-        // eslint-disable-next-line
-        <a id="about">
+        <section id="about">
             <div className="section">
                 <div className="about-me">
                     <div className="bio-container">
@@ -40,7 +39,7 @@ function AboutMe() {
                     </div>
                 </div>
             </div>
-        </a>
+        </section>
     )
 }
 

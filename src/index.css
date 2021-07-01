@@ -267,7 +267,19 @@ color: #e6aa6e;
   text-decoration: none;
 }
 
+.project-info span {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.7rem;
+  color: #f7c089;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .project-info a:hover {
+  color: #e6aa6e;
+}
+
+.project-info span:hover {
   color: #e6aa6e;
 }
 

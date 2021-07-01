@@ -1,7 +1,11 @@
+import React, { useState } from "react"
+import ModalVideo from 'react-modal-video'
+
 function Projects() {
+    const [isOpen, setOpen] = useState(false)
+
     return(
-        // eslint-disable-next-line
-        <a id="projects">
+        <section id="projects">
             <div className="section">
                 <div className="projects">
                     <h1>Project Work</h1>
@@ -23,7 +27,10 @@ function Projects() {
                                         [Adobe AfterEffects] [Semantic UI React] [Custom CSS]
                                     </p>
                                 </div>
-                                <a href="http://localhost:3000">Watch Demo</a>
+                                <React.Fragment>
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="WNL0FNjPNUQ" onClose={() => setOpen(false)} />
+                                    <span onClick={()=> setOpen(true)}>Watch Demo</span>
+                                </React.Fragment>
                             </div>
                         </div>
                         <div className="project-container align-right">
@@ -64,7 +71,7 @@ function Projects() {
                     </div>
                 </div>
             </div>
-        </a>
+        </section>
     )
 }
 

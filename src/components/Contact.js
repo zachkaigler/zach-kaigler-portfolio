@@ -1,7 +1,6 @@
 function Contact() {
     return(
-        // eslint-disable-next-line
-        <a id="contact">
+        <section id="contact">
             <div className="section">
                 <div className="contact">
                     <h1>Want to know more?</h1>
@@ -16,7 +15,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-        </a>
+        </section>
     )
 }
 
