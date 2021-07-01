@@ -1,11 +1,13 @@
+import { Link } from 'react-scroll'
+
 function NavBar() {
     return(
         <div className="nav">
-            <a href="#main" className="logo-link"><img src="https://i.imgur.com/5ee7ZQh.png" alt="logo" style={{ height: "75px" }}/></a>
+            <Link to="main" className="logo-link" smooth={true} duration={1000}><img src="https://i.imgur.com/5ee7ZQh.png" alt="logo" style={{ height: "75px" }}/></Link>
             <div className="nav-links-container">
-                <a href="#about" className="nav-link">Me</a>
-                <a href="#projects" className="nav-link">Stuff I Made</a>
-                <a href="#contact" className="nav-link">Hit Me Up</a>
+                <Link to="about" className="nav-link" smooth={true} duration={1000}>Me</Link>
+                <Link to="projects" className="nav-link" smooth={true} duration={1000}>Stuff I Made</Link>
+                <Link to="contact" className="nav-link" smooth={true} duration={1000}>Hit Me Up</Link>
             </div>
         </div>
     )

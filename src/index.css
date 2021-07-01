@@ -65,6 +65,7 @@ h3 {
 .logo-link {
   margin-left: 3%;
   margin-top: 1%;
+  cursor: pointer;
 }
 
 .nav-links-container {
@@ -78,6 +79,7 @@ h3 {
   font-size: 2rem;
   color: #f7c089;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-link:hover {
@@ -87,8 +89,8 @@ h3 {
 .landing {
   display: flex;
   align-items: center;
-  margin-top: -20%;
-  margin-left: 10%;
+  margin-top: -20rem;
+  margin-left: 10rem;
 }
 
 .hi p {
