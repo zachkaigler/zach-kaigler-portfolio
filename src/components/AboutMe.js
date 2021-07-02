@@ -6,7 +6,10 @@ function AboutMe() {
             <div className="section">
                 <div className="about-me">
                     <div className="bio-container">
-                        <img src="https://i.imgur.com/WEGbYN2.jpg" alt="me" className="selfie"/>
+                        <div className="selfie-container">
+                            <img src="https://i.imgur.com/WEGbYN2.jpg" alt="me" className="selfie"/>
+                            <img src="https://i.imgur.com/FKPKwNN.png" alt="mustache" className="mustache"/>
+                        </div>
                         <div className="bio">
                             <h1>This Guy</h1>
                             <p>

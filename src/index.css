@@ -205,6 +205,15 @@ span.intro-title p {
   border-radius: 50%;
   box-shadow: 0px 0px 100px -30px rgba(70, 70, 70, 0.701);
   max-height: 32rem;
+  margin-top: 15rem;
+}
+
+.mustache {
+  position: relative;
+  top: -10rem;
+  border-radius: 50%;
+  max-height: 32rem;
+  z-index: 11;
 }
 
 .bio {
