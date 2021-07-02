@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll'
+
 function AboutMe() {
     return(
         <section id="about">
@@ -18,7 +20,7 @@ function AboutMe() {
                             <p>
                                 A graduate of Flatiron School’s Software Engineering program,
                                 I seek to work on engaging projects in collaborative and
-                                friendly environments. <a href="http://localhost:3000" className="inline-link">Interested?</a>
+                                friendly environments. <Link to="contact" className="inline-link" smooth={true} duration={1000}>Interested?</Link>
                             </p>
                         </div>
                     </div>

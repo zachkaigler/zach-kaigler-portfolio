@@ -166,7 +166,7 @@ h3 {
 .inline-link {
   color: #f7c089;
   text-decoration: none;
-  
+  cursor: pointer;
 }
 
 .inline-link:hover {
