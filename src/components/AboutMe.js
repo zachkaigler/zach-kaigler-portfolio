@@ -1,14 +1,17 @@
+import { useState } from 'react'
 import { Link } from 'react-scroll'
 
 function AboutMe() {
+    const [isMustacheVisible, setIsMustacheVisible] = useState(false)
+
     return(
         <section id="about">
             <div className="section">
                 <div className="about-me">
                     <div className="bio-container">
-                        <div className="selfie-container">
+                        <div className="selfie-container" onClick={() => setIsMustacheVisible(true)}>
                             <img src="https://i.imgur.com/WEGbYN2.jpg" alt="me" className="selfie"/>
-                            <img src="https://i.imgur.com/FKPKwNN.png" alt="mustache" className="mustache"/>
+                            { isMustacheVisible ? <img src="https://i.imgur.com/V1F4K7p.gif" alt="mustache" className="mustache"/> : null }
                         </div>
                         <div className="bio">
                             <h1>This Guy</h1>
