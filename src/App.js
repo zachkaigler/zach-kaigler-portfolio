@@ -6,16 +6,18 @@ import Projects from "./components/Projects";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Landing />
-      <AboutMe />
-      <Projects />
-      <Contact />
-      <div className="footer">
-        <p>Designed and built by Zach Kaigler. <a href="https://github.com/zachkaigler/zach-kaigler-portfolio" target="blank" className="inline-link">Check out the repo.</a></p>
+    <section id="top">
+      <div className="App">
+        <NavBar />
+        <Landing />
+        <AboutMe />
+        <Projects />
+        <Contact />
+        <div className="footer">
+          <p>Designed and built by Zach Kaigler. <a href="https://github.com/zachkaigler/zach-kaigler-portfolio" target="blank" className="inline-link">Check out the repo.</a></p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 

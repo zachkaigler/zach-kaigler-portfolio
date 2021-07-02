@@ -197,7 +197,7 @@ span.intro-title p {
 .bio-container {
   display: flex;
   align-items: center;
-  margin-left: 12rem;
+  margin-left: 5rem;
   margin-right: 5rem
 }
 
@@ -224,7 +224,7 @@ span.intro-title p {
 
 .bio {
   margin-left: 5%;
-  width: 50%;
+  width: 43rem;
 }
 
 .bio p {
