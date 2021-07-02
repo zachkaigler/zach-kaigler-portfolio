@@ -90,7 +90,6 @@ h3 {
   display: flex;
   align-items: center;
   margin-top: -20rem;
-  margin-left: 10rem;
 }
 
 .hi p {
@@ -120,7 +119,7 @@ h3 {
 }
 
 .intro p {
-  width: 80%;
+  width: 40rem;
   margin: 0;
 }
 
@@ -303,6 +302,7 @@ color: #e6aa6e;
 .project-info {
   margin-left: 5%;
   margin-right: 5%;
+  min-width: 50%;
 }
 
 .proj-screen {
