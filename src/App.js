@@ -14,7 +14,7 @@ function App() {
         <Projects />
         <Contact />
         <div className="footer">
-          <p>Designed and built by Zach Kaigler. <a href="https://github.com/zachkaigler/zach-kaigler-portfolio" target="blank" className="inline-link">Check out the repo.</a></p>
+          <p>Designed and built by Zach Kaigler. <a href="https://github.com/zachkaigler/zach-kaigler-portfolio" target="_blank" rel="noreferrer" className="inline-link">Check out the repo.</a></p>
         </div>
       </div>
     </section>
