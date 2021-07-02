@@ -15,7 +15,7 @@ function Projects() {
                         <div className="project-container">
                             <img src="https://i.imgur.com/gkBUzX3.png" className="proj-screen" alt="gameon" />
                             <div className="project-info">
-                                <div className="project-title"><h2>Game On</h2> <a href="https://github.com/zachkaigler/game-on-frontend" target="blank"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a></div>
+                                <div className="project-title"><h2>Game On</h2> <a href="https://github.com/zachkaigler/game-on-frontend" target="_blank" rel="noreferrer"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a></div>
                                 <p>
                                     A social networking app designed to connect users to
                                     new friend groups through shared interests in hobbies
@@ -36,7 +36,7 @@ function Projects() {
                         </div>
                         <div className="project-container align-right">
                             <div className="project-info align-right">
-                                <div className="project-title"><a href="https://github.com/jbrundagejr/phase-4-front-end" target="blank"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a> <h2>Vinylboxd</h2></div>
+                                <div className="project-title"><a href="https://github.com/jbrundagejr/phase-4-front-end" target="_blank" rel="noreferrer"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a> <h2>Vinylboxd</h2></div>
                                 <p>
                                     A social platform for vinyl enthusiasts to share, rate, and review
                                     records in their collection.
@@ -57,7 +57,7 @@ function Projects() {
                         <div className="project-container">
                             <img src="https://i.imgur.com/u5b95D4.png" className="proj-screen" alt="flexfox" />
                             <div className="project-info">
-                                <div className="project-title"><h2>Flex Fox!</h2> <a href="https://github.com/zachkaigler/flex-fox" target="blank"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a></div>
+                                <div className="project-title"><h2>Flex Fox!</h2> <a href="https://github.com/zachkaigler/flex-fox" target="_blank" rel="noreferrer"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a></div>
                                 <p>
                                     An adorable Flexbox visualizer designed to showcase
                                     the technology’s versatility in styling collections of
