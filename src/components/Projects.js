@@ -3,6 +3,7 @@ import ModalVideo from 'react-modal-video'
 
 function Projects() {
     const [isOpen, setOpen] = useState(false)
+    const [isOpen2, setOpen2] = useState(false)
 
     return(
         <section id="projects">
@@ -46,7 +47,10 @@ function Projects() {
                                         [React] [Ruby on Rails] [JWT] [Adobe Photoshop] [Semantic UI React] [Custom CSS]
                                     </p>
                                 </div>
-                                <a href="http://localhost:3000">Watch Demo</a>
+                                <React.Fragment>
+                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen2} videoId="Qc-piW2B2vE" onClose={() => setOpen2(false)} />
+                                    <span onClick={()=> setOpen2(true)}>Watch Demo</span>
+                                </React.Fragment>
                             </div>
                             <img src="https://i.imgur.com/bT4bJ4O.png" className="proj-screen" alt="vinylboxd" />
                         </div>

@@ -98,6 +98,9 @@ h3 {
   color: #f7c089;
   font-weight: bold;
   animation: hiAnimation 1s ease-in;
+  -webkit-animation: hiAnimation 1s ease-in;
+  -moz-animation: hiAnimation 1s ease-in;
+  -o-animation: hiAnimation 1s ease-in;
 }
 
 @keyframes hiAnimation {
@@ -112,6 +115,37 @@ h3 {
     filter: blur(0px);
     margin-left: 0rem;
   }
+}
+
+@-webkit-keyframes hiAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-left: -2rem; }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-left: 0rem; }
+}
+@-moz-keyframes hiAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-left: -2rem; }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-left: 0rem; }
+}
+@-o-keyframes hiAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-left: -2rem; }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-left: 0rem; }
 }
 
 .intro {
@@ -132,6 +166,9 @@ span.intro-name {
 
 span.intro-name p {
   animation: nameAnimation 2s ease-in;
+  -webkit-animation: nameAnimation 2s ease-in;
+  -moz-animation: nameAnimation 2s ease-in;
+  -o-animation: nameAnimation 2s ease-in;
 }
 
 @keyframes nameAnimation {
@@ -154,6 +191,52 @@ span.intro-name p {
   }
 }
 
+@-webkit-keyframes nameAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem; }
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem;
+  }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-bottom: 0rem; }
+}
+@-moz-keyframes nameAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem; }
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem;
+  }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-bottom: 0rem; }
+}
+@-o-keyframes nameAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem; }
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem;
+  }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-bottom: 0rem; }
+}
+
 span.intro-title {
   font-family: 'Prompt', sans-serif;
   font-size: 4rem;
@@ -164,6 +247,9 @@ span.intro-title {
 
 span.intro-title p {
   animation: titleAnimation 2s ease-in;
+  -webkit-animation: titleAnimation 2s ease-in;
+  -moz-animation: titleAnimation 2s ease-in;
+  -o-animation: titleAnimation 2s ease-in;
 }
 
 @keyframes titleAnimation {
@@ -184,6 +270,55 @@ span.intro-title p {
     filter: blur(0px);
     margin-top: 0rem;
   }
+}
+
+@-webkit-keyframes titleAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-top: 0rem; }
+}
+@-moz-keyframes titleAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-top: 0rem; }
+}
+@-o-keyframes titleAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    margin-top: 0rem; }
 }
 
 .about-me {

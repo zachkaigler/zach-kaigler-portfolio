@@ -1,10 +1,12 @@
+import resume from '../kaigler_resume_SE_2021.pdf'
+
 function Contact() {
     return(
         <section id="contact">
             <div className="section">
                 <div className="contact">
                     <h1>Want to know more?</h1>
-                    <span>Feel free to <a href="http://localhost:3000" className="inline-link">peep the resume</a>, <a href="https://zachkaigler.medium.com/" className="inline-link" target="blank">check out my blog</a>, or <a href="mailto: zjkaig@gmail.com" className="inline-link">shoot me an email</a>.</span>
+                    <span>Feel free to <a href={resume} target="blank" className="inline-link">peep the resume</a>, <a href="https://zachkaigler.medium.com/" className="inline-link" target="blank">check out my blog</a>, or <a href="mailto: zjkaig@gmail.com" className="inline-link">shoot me an email</a>.</span>
                     <div className="socials">
                         <span>You can also find me on any of these fine platforms:</span>
                         <div className="social-icons">
