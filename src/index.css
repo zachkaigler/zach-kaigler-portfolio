@@ -98,7 +98,21 @@ h3 {
   font-size: 20rem;
   color: #f7c089;
   font-weight: bold;
-  margin: 0px;
+  animation: hiAnimation 1s ease-in;
+}
+
+@keyframes hiAnimation {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    margin-left: -2rem;
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    margin-left: 0rem;
+  }
 }
 
 .intro {
@@ -106,25 +120,71 @@ h3 {
 }
 
 .intro p {
-  margin: 0;
   width: 80%;
+  margin: 0;
 }
 
-.intro-name {
+span.intro-name {
   font-family: 'Prompt', sans-serif;
   font-size: 4rem;
   color: #bababa;
-  margin: 0px;
   font-weight: 400;
 }
 
-.intro-title {
+span.intro-name p {
+  animation: nameAnimation 2s ease-in;
+}
+
+@keyframes nameAnimation {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem;
+  }
+
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-bottom: 2rem;
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    margin-bottom: 0rem;
+  }
+}
+
+span.intro-title {
   font-family: 'Prompt', sans-serif;
   font-size: 4rem;
   line-height: 70px;
   color: #d6d6d6;
-  margin: 0px;
   font-weight: 400;
+}
+
+span.intro-title p {
+  animation: titleAnimation 2s ease-in;
+}
+
+@keyframes titleAnimation {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+
+  50% {
+    opacity: 0;
+    filter: blur(10px);
+    margin-top: 2rem;
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    margin-top: 0rem;
+  }
 }
 
 .about-me {
@@ -187,6 +247,7 @@ color: #e6aa6e;
   height: 3.5rem;
   opacity: 0.75;
   margin: 2%;
+  transition: opacity 230ms;
 }
 
 .tools-icons img:hover {
@@ -243,6 +304,7 @@ color: #e6aa6e;
 .gh-icon {
   height: 3.5rem;
   opacity: .75;
+  transition: opacity 230ms;
 }
 
 .gh-icon:hover {
@@ -288,10 +350,15 @@ color: #e6aa6e;
   margin-bottom: 2rem;
 }
 
-.built-with {
+span.built-with {
   font-family: 'Prompt', sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
+  color: #848484;
+  cursor: default;
+}
+
+span.built-with:hover {
   color: #848484;
 }
 
@@ -333,6 +400,7 @@ color: #e6aa6e;
   height: 3.5rem;
   opacity: 0.75;
   margin: 2%;
+  transition: opacity 230ms;
 }
 
 .social-icons a img:hover {
