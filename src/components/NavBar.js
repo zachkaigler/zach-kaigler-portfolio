@@ -3,7 +3,7 @@ import { Link } from 'react-scroll'
 function NavBar() {
     return(
         <div className="nav">
-            <Link to="top" className="logo-link" smooth={true} duration={1000}><img src="https://i.imgur.com/5ee7ZQh.png" alt="logo" style={{ height: "4rem" }}/></Link>
+            <Link to="top" className="logo-link" smooth={true} duration={1000}><img src="https://i.imgur.com/5ee7ZQh.png" alt="logo"/></Link>
             <div className="nav-links-container">
                 <Link to="about" className="nav-link" smooth={true} duration={1000}>Me</Link>
                 <Link to="projects" className="nav-link" smooth={true} duration={1000}>Stuff I Made</Link>
