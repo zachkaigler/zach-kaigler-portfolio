@@ -7,7 +7,13 @@ function BlogCard({ title, image, url, date, content}) {
             return word
         } else if (counter === 30) {
             counter += 1
-            return `${word}...`
+            if (word.search(/[^\w\s]|_/g) === -1) {
+                return `${word}...`
+            } else {
+                let noPunc = word.split("")
+                noPunc.pop()
+                return `${noPunc.join("")}...`
+            }
         } else {
             return null
         }
