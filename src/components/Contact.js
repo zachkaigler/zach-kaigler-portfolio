@@ -6,7 +6,7 @@ function Contact() {
             <div className="section">
                 <div className="contact">
                     <h1>Want to know more?</h1>
-                    <span>Feel free to <a href={resume} target="_blank" rel="noreferrer" className="inline-link">peep the resume</a>, <a href="https://zachkaigler.medium.com/" className="inline-link" target="_blank" rel="noreferrer">check out my blog</a>, or <a href="mailto: zjkaig@gmail.com" className="inline-link">shoot me an email</a>.</span>
+                    <span>Feel free to <a href={resume} target="_blank" rel="noreferrer" className="inline-link">peep the resume</a> or <a href="mailto: zjkaig@gmail.com" className="inline-link">shoot me an email</a>.</span>
                     <div className="socials">
                         <span>You can also find me on any of these fine platforms:</span>
                         <div className="social-icons">

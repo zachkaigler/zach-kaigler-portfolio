@@ -7,6 +7,7 @@ function NavBar() {
             <div className="nav-links-container">
                 <Link to="about" className="nav-link" smooth={true} duration={1000}>Me</Link>
                 <Link to="projects" className="nav-link" smooth={true} duration={1000}>Stuff I Made</Link>
+                <Link to="blogs" className="nav-link" smooth={true} duration={1000}>Things I Wrote</Link>
                 <Link to="contact" className="nav-link" smooth={true} duration={1000}>Hit Me Up</Link>
             </div>
         </div>
