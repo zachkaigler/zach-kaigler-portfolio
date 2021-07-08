@@ -60,6 +60,51 @@ h3 {
   top: 0;
   left: 0;
   z-index: 10;
+  animation: navAnimation 1s ease-in;
+  -webkit-animation: navAnimation 1s ease-in;
+  -moz-animation: navAnimation 1s ease-in;
+  -o-animation: navAnimation 1s ease-in;
+}
+
+@keyframes navAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    }
+}
+@-webkit-keyframes navAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    }
+}
+@-moz-keyframes navAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    }
+}
+@-o-keyframes navAnimation {
+  0%   { 
+    opacity: 0;
+    filter: blur(10px);
+    }
+  100% { 
+    opacity: 1;
+    filter: blur(0px);
+    }
 }
 
 .logo-link {
@@ -84,6 +129,10 @@ a.logo-link img {
   color: #f7c089;
   text-decoration: none;
   cursor: pointer;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 .nav-link:hover {
@@ -682,6 +731,10 @@ span.built-with:hover {
     top: 0;
     left: 0;
     z-index: 10;
+    animation: navAnimation 1s ease-in;
+    -webkit-animation: navAnimation 1s ease-in;
+    -moz-animation: navAnimation 1s ease-in;
+    -o-animation: navAnimation 1s ease-in;
   }
 
   .nav-link {
@@ -694,15 +747,16 @@ span.built-with:hover {
     cursor: pointer;
   }
 
+  .active {
+    text-decoration: underline;
+  }
+
   .logo-link {
-    /* display: none; */
-    /* margin-left: 1.25rem; */
     margin-top: 1%;
     cursor: pointer;
   }
   
   a.logo-link img {
-    /* display: none; */
     height: 2.2rem;
   }
 

@@ -1,23 +1,22 @@
 function BlogCard({ title, image, url, date, content}) {
     
     let counter = 0
+    const regEx = new RegExp(/[^\w\s]|_/g)
     const contentBlurb = content.split("<p>")[1].split(" ").map((word) => {
         if (counter < 30) {
             counter += 1
             return word
         } else if (counter === 30) {
             counter += 1
-            if (word.search(/[^\w\s]|_/g) === -1) {
-                return `${word}...`
+            if (regEx.test(word[word.length - 1])) {
+                return `${word.split("").slice(0, -1).join("")}...`
             } else {
-                let noPunc = word.split("")
-                noPunc.pop()
-                return `${noPunc.join("")}...`
-            }
+                return `${word}...`
+                }
         } else {
             return null
-        }
-    }).join(" ")
+    }
+}).join(" ")
 
     return(
         <a href={url} target="_blank" rel="noreferrer" className="blog-card-a">
