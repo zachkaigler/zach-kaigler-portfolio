@@ -1,4 +1,7 @@
 import resume from '../kaigler_resume_SE_2021.pdf'
+import ghIcon from '../images/github.png'
+import liIcon from '../images/linkedin.png'
+import igIcon from '../images/ig.png'
 
 function Contact() {
     return(
@@ -10,9 +13,9 @@ function Contact() {
                     <div className="socials">
                         <span>You can also find me on any of these fine platforms:</span>
                         <div className="social-icons">
-                            <a href="https://github.com/zachkaigler" target="_blank" rel="noreferrer"><img src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a> 
-                            <a href="https://www.linkedin.com/in/zachkaigler/" target="_blank" rel="noreferrer"><img src="https://i.imgur.com/gTRf2NZ.png" alt="linkedin"/></a>
-                            <a href="https://www.instagram.com/zkaigz/" target="_blank" rel="noreferrer"><img src="https://i.imgur.com/BgBb1Qd.png" alt="instagram"/></a>
+                            <a href="https://github.com/zachkaigler" target="_blank" rel="noreferrer"><img src={ghIcon} alt="github"/></a> 
+                            <a href="https://www.linkedin.com/in/zachkaigler/" target="_blank" rel="noreferrer"><img src={liIcon} alt="linkedin"/></a>
+                            <a href="https://www.instagram.com/zkaigz/" target="_blank" rel="noreferrer"><img src={igIcon} alt="instagram"/></a>
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,30 @@
-import React, { useState } from "react"
-import ModalVideo from 'react-modal-video'
+import { projects } from "../projdata"
+import ProjectCard from "./ProjectCard"
+import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
 
 function Projects() {
-    const [isOpen, setOpen] = useState(false)
-    const [isOpen2, setOpen2] = useState(false)
+    const [displayNum, setDisplayNum] = useState(2)
+
+    const projectCards = projects.map((proj) => {
+        if (projects.indexOf(proj) <= displayNum) {
+            return <ProjectCard 
+                    key={uuidv4()}
+                    name={proj.name}
+                    image={proj.image}
+                    desc={proj.desc}
+                    tools={proj.tools}
+                    videoId={proj.videoId}
+                    linkUrl={proj.linkUrl}
+                    githubUrl={proj.githubUrl}
+                    projects={projects}
+                    proj={proj}
+                    displayNum={displayNum}
+                />
+        } else {
+            return null
+        } 
+    })
 
     return(
         <section id="projects">
@@ -12,67 +33,9 @@ function Projects() {
                     <h1>Project Work</h1>
                     <div className="line"></div>
                     <div className="projects-list">
-                        <div className="project-container">
-                            <img src="https://i.imgur.com/gkBUzX3.png" className="proj-screen" alt="gameon" />
-                            <div className="project-info">
-                                <div className="project-title"><h2>Game On</h2> <a href="https://github.com/zachkaigler/game-on-frontend" target="_blank" rel="noreferrer"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a></div>
-                                <p>
-                                    A social networking app designed to connect users to
-                                    new friend groups through shared interests in hobbies
-                                    and games.
-                                </p>
-                                <div className="project-tech">
-                                    <span className="built-with">Built with:</span>
-                                    <p>
-                                        [React] [Ruby on Rails] [Action Cable] [WebSockets] [JWT] [Adobe Photoshop]
-                                        [Adobe AfterEffects] [Semantic UI React] [Custom CSS]
-                                    </p>
-                                </div>
-                                <React.Fragment>
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId="WNL0FNjPNUQ" onClose={() => setOpen(false)} />
-                                    <span onClick={()=> setOpen(true)}>Watch Demo</span>
-                                </React.Fragment>
-                            </div>
-                        </div>
-                        <div className="project-container align-right">
-                            <div className="project-info align-right">
-                                <div className="project-title"><a href="https://github.com/jbrundagejr/phase-4-front-end" target="_blank" rel="noreferrer"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a> <h2>Vinylboxd</h2></div>
-                                <p>
-                                    A social platform for vinyl enthusiasts to share, rate, and review
-                                    records in their collection.
-                                </p>
-                                <div className="project-tech align-right">
-                                    <span className="built-with">Built with:</span>
-                                    <p>
-                                        [React] [Ruby on Rails] [JWT] [Adobe Photoshop] [Semantic UI React] [Custom CSS]
-                                    </p>
-                                </div>
-                                <React.Fragment>
-                                    <ModalVideo channel='youtube' autoplay isOpen={isOpen2} videoId="Qc-piW2B2vE" onClose={() => setOpen2(false)} />
-                                    <span onClick={()=> setOpen2(true)}>Watch Demo</span>
-                                </React.Fragment>
-                            </div>
-                            <img src="https://i.imgur.com/bT4bJ4O.png" className="proj-screen" alt="vinylboxd" />
-                        </div>
-                        <div className="project-container">
-                            <img src="https://i.imgur.com/u5b95D4.png" className="proj-screen" alt="flexfox" />
-                            <div className="project-info">
-                                <div className="project-title"><h2>Flex Fox!</h2> <a href="https://github.com/zachkaigler/flex-fox" target="_blank" rel="noreferrer"><img className="gh-icon" src="https://i.imgur.com/Nkxx2Ht.png" alt="github"/></a></div>
-                                <p>
-                                    An adorable Flexbox visualizer designed to showcase
-                                    the technology’s versatility in styling collections of
-                                    items.
-                                </p>
-                                <div className="project-tech">
-                                    <span className="built-with">Built with:</span>
-                                    <p>
-                                        [React] [styled-components] [Adobe Photoshop] [Custom CSS]
-                                    </p>
-                                </div>
-                                <a href="https://zachkaigler.github.io/flex-fox/" target="blank">Check It Out</a>
-                            </div>
-                        </div>
+                        {projectCards}
                     </div>
+                    { displayNum >= projects.length ? <h3 className="show" onClick={() => setDisplayNum(2)}>Show Less</h3> : <h3 className="show" onClick={() => setDisplayNum(displayNum + 3)}>Show More</h3> }
                 </div>
             </div>
         </section>

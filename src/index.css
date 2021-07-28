@@ -564,6 +564,14 @@ color: #e6aa6e;
   color: #e6aa6e;
 }
 
+.show {
+  cursor: pointer;
+}
+
+.show:hover {
+  color: #e6aa6e;
+}
+
 .project-tech {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -581,8 +589,15 @@ span.built-with:hover {
   color: #848484;
 }
 
-.project-tech p {
+span.tool {
   font-size: 1rem;
+  color: #848484;
+  margin-right: .5rem;
+  cursor: default;
+}
+
+span.tool:hover {
+  color: #848484;
 }
 
 .align-right {
@@ -974,8 +989,26 @@ span.built-with:hover {
     margin-bottom: 1rem;
   }
 
-  .project-tech p {
+  span.tool {
     font-size: .8rem;
+    color: #848484;
+    cursor: default;
+  }
+
+  span.tool:hover {
+    color: #848484;
+  }
+
+  span.built-with {
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    font-size: .8rem;
+    color: #848484;
+    cursor: default;
+  }
+  
+  span.built-with:hover {
+    color: #848484;
   }
 
   .contact {

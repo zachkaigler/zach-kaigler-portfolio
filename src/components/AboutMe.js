@@ -1,5 +1,20 @@
 import { useState } from 'react'
 import { Link } from 'react-scroll'
+import selfie from '../images/selfie.jpg'
+import mustache from '../images/mustache.gif'
+import js from '../images/js.png'
+import reactIcon from '../images/react.png'
+import rubyIcon from '../images/ruby.png'
+import railsIcon from '../images/rails.png'
+import semanticIcon from '../images/semantic.png'
+import htmlIcon from '../images/html.png'
+import cssIcon from '../images/css.png'
+import psIcon from '../images/ps.png'
+import aeIcon from '../images/ae.png'
+import nodeIcon from '../images/node.png'
+import reduxIcon from '../images/redux.png'
+import sassIcon from '../images/sass.png'
+import expressIcon from '../images/express.png'
 
 function AboutMe() {
     const [isMustacheVisible, setIsMustacheVisible] = useState(false)
@@ -10,8 +25,8 @@ function AboutMe() {
                 <div className="about-me">
                     <div className="bio-container">
                         <div className="selfie-container" onClick={() => setIsMustacheVisible(true)}>
-                            <img src="https://i.imgur.com/WEGbYN2.jpg" alt="me" className="selfie"/>
-                            { isMustacheVisible ? <img src="https://i.imgur.com/V1F4K7p.gif" alt="mustache" className="mustache"/> : null }
+                            <img src={selfie} alt="me" className="selfie"/>
+                            { isMustacheVisible ? <img src={mustache} alt="mustache" className="mustache"/> : null }
                         </div>
                         <div className="bio">
                             <h1>This Guy</h1>
@@ -33,16 +48,19 @@ function AboutMe() {
                     <div className="tools">
                         <h3>Tools I Use</h3>
                         <div className="tools-icons">
-                            <img src="https://i.imgur.com/Vbald9g.png" alt="js"/>
-                            <img src="https://i.imgur.com/lR9sD5i.png" alt="react"/>
-                            <img src="https://i.imgur.com/8KYzkvF.png" alt="ruby"/>
-                            <img src="https://i.imgur.com/Cg13vFV.png" alt="rails"/>
-                            <img src="https://i.imgur.com/4bTBgfa.png" alt="semantic"/>
-                            <img src="https://i.imgur.com/N7epbmx.png" alt="html"/>
-                            <img src="https://i.imgur.com/mxErRZ5.png" alt="css"/>
-                            <img src="https://i.imgur.com/DjCFFW6.png" alt="photoshop"/>
-                            <img src="https://i.imgur.com/a94IK4u.png" alt="aftereffects"/>
-                            <img src="https://i.imgur.com/Zmd1Qen.png" alt="premiere"/>
+                            <img src={js} alt="js"/>
+                            <img src={reactIcon} alt="react"/>
+                            <img src={reduxIcon} alt="redux"/>
+                            <img src={nodeIcon} alt="node"/>
+                            <img src={expressIcon} alt="express"/>
+                            <img src={rubyIcon} alt="ruby"/>
+                            <img src={railsIcon} alt="rails"/>
+                            <img src={sassIcon} alt="sass"/>
+                            <img src={htmlIcon} alt="html"/>
+                            <img src={cssIcon} alt="css"/>
+                            <img src={semanticIcon} alt="semantic"/>
+                            <img src={psIcon} alt="photoshop"/>
+                            <img src={aeIcon} alt="aftereffects"/>
                         </div>
                     </div>
                 </div>
