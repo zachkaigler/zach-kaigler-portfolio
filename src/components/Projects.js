@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard"
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from "react";
 
-function Projects() {
+function Projects({ isOpen, setIsOpen, activeVideo, setActiveVideo }) {
     const [displayNum, setDisplayNum] = useState(2)
 
     const projectCards = projects.map((proj) => {
@@ -20,6 +20,10 @@ function Projects() {
                     projects={projects}
                     proj={proj}
                     displayNum={displayNum}
+                    isOpen={isOpen}
+                    setIsOpen={setIsOpen}
+                    activeVideo={activeVideo}
+                    setActiveVideo={setActiveVideo}
                 />
         } else {
             return null
