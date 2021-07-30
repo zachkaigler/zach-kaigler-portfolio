@@ -48,19 +48,19 @@ function AboutMe() {
                     <div className="tools">
                         <h3>Tools I Use</h3>
                         <div className="tools-icons">
-                            <img src={js} alt="js"/>
-                            <img src={reactIcon} alt="react"/>
-                            <img src={reduxIcon} alt="redux"/>
-                            <img src={nodeIcon} alt="node"/>
-                            <img src={expressIcon} alt="express"/>
-                            <img src={rubyIcon} alt="ruby"/>
-                            <img src={railsIcon} alt="rails"/>
-                            <img src={sassIcon} alt="sass"/>
-                            <img src={htmlIcon} alt="html"/>
-                            <img src={cssIcon} alt="css"/>
-                            <img src={semanticIcon} alt="semantic"/>
-                            <img src={psIcon} alt="photoshop"/>
-                            <img src={aeIcon} alt="aftereffects"/>
+                            <img src={js} alt="js" title="JavaScript"/>
+                            <img src={reactIcon} alt="react" title="React"/>
+                            <img src={reduxIcon} alt="redux" title="Redux"/>
+                            <img src={nodeIcon} alt="node" title="Node.js"/>
+                            <img src={expressIcon} alt="express" title="Express"/>
+                            <img src={rubyIcon} alt="ruby" title="Ruby"/>
+                            <img src={railsIcon} alt="rails" title="Rails"/>
+                            <img src={sassIcon} alt="sass" title="Sass"/>
+                            <img src={htmlIcon} alt="html" title="HTML"/>
+                            <img src={cssIcon} alt="css" title="CSS"/>
+                            <img src={semanticIcon} alt="semantic" title="Semantic UI React"/>
+                            <img src={psIcon} alt="photoshop" title="Adobe Photoshop"/>
+                            <img src={aeIcon} alt="aftereffects" title="Adobe AfterEffects"/>
                         </div>
                     </div>
                 </div>
