@@ -753,6 +753,8 @@ span.tool:hover {
   z-index: 1000;
 }
 
+/* Mobile rules */
+
 @media (max-width: 480px) {
 	.App {
     min-width: 100vw;
