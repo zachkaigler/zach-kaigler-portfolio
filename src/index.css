@@ -508,11 +508,13 @@ color: #e6aa6e;
   text-align: right;
   padding: 1rem;
   width: 8rem;
+  border-bottom: 1px solid white;
   cursor: default;
 }
 
 .jobs-left p:hover {
   background-color: #fbfbfb;
+  border-bottom: 1px solid #fbfbfb;
 }
 
 .jobs-left p.selected-job {
