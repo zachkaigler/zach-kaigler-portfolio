@@ -3,8 +3,8 @@ import ghIcon from '../images/github.png'
 import { v4 as uuidv4 } from 'uuid';
 import { useSpring, animated } from 'react-spring'
 
-const ProjectCard = ({ name, image, desc, tools, videoId, linkUrl, githubUrl, projects, proj, isOpen, setIsOpen, activeVideo, setActiveVideo }) => {
-    const [isRendered, setIsRendered] = useState( projects.indexOf(proj) <= 2 || isOpen || videoId === activeVideo ? true : false )
+const ProjectCard = ({ name, image, desc, tools, videoId, linkUrl, githubUrl, projects, proj, setIsOpen, setActiveVideo }) => {
+    const [isRendered, setIsRendered] = useState( projects.indexOf(proj) <= 2 ? true : false )
 
     useEffect(() => {
         setIsRendered(true)
@@ -37,13 +37,14 @@ const ProjectCard = ({ name, image, desc, tools, videoId, linkUrl, githubUrl, pr
     }
 
     return (
-        <animated.div className={`project-container ${ alignRight() ? "align-right" : null }` } style={anim}>
+        <animated.div className={`project-container ${ alignRight() ? "align-right" : null } ${name}` } style={anim}>
             { !alignRight() ? <img src={image} className="proj-screen" alt={name} /> : null }
             <div className={`project-info ${ alignRight() ? "align-right" : null }`}>
-                { !alignRight() ? 
-                    <div className="project-title"><h2>{name}</h2> <a href={githubUrl} target="_blank" rel="noreferrer"><img className="gh-icon" src={ghIcon} alt="github"/></a></div>
-                :
-                    <div className="project-title"><a href={githubUrl} target="_blank" rel="noreferrer"><img className="gh-icon" src={ghIcon} alt="github"/></a> <h2>{name}</h2></div> 
+                {
+                    !alignRight() ? 
+                        <div className="project-title"><h2>{name}</h2> { githubUrl ? <a href={githubUrl} target="_blank" rel="noreferrer"><img className="gh-icon" src={ghIcon} alt="github"/></a> : null }</div>
+                    :
+                        <div className="project-title">{ githubUrl ? <a href={githubUrl} target="_blank" rel="noreferrer"><img className="gh-icon" src={ghIcon} alt="github"/></a> : null } <h2>{name}</h2></div> 
                 }
                 <p>{desc}</p>
                 <div className={`project-tech ${ alignRight() ? "align-right" : null }`}>

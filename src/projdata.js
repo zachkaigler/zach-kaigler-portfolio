@@ -2,8 +2,20 @@ import quicknote from './images/proj-quicknote.png'
 import gameon from './images/proj-gameon.png'
 import flexfox from './images/proj-flexfox.png'
 import vinylboxd from './images/proj-vinylboxd.png'
+import nextcpap from './images/proj-nextcpap.png'
 
 export const projects = [
+    {
+        name: "NEXTcpap",
+        image: nextcpap,
+        desc: "The landing page for NEXTcpap's services.",
+        tools: [
+            "React", "Nodejs", "AWS Lambda", "DynamoDB", "Sass", "Adobe Photoshop"
+        ],
+        videoId: null,
+        linkUrl: "https://www.nextcpap.com/",
+        githubUrl: null
+    },
     {
         name: "QuickNote",
         image: quicknote,

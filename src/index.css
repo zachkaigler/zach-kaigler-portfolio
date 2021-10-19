@@ -472,6 +472,85 @@ color: #e6aa6e;
   opacity: 1;
 }
 
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.experience p {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.2rem;
+  color: #848484;
+  margin: 0px;
+  font-weight: 350;
+}
+
+.jobs-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: center;
+}
+
+.jobs-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 8rem;
+}
+
+.jobs-left p {
+  text-align: right;
+  padding: 1rem;
+  width: 8rem;
+  cursor: default;
+}
+
+.jobs-left p:hover {
+  background-color: #fbfbfb;
+}
+
+.jobs-left p.selected-job {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #f7c089;
+}
+
+.jobs-right {
+  background-color: #f5f5f5;
+  width: 35rem;
+  min-height: 22rem;
+  padding: 1rem;
+}
+
+.experience p.title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.experience p.company {
+  font-weight: bold;
+}
+
+.experience p.company span {
+  font-weight: normal;
+}
+
+.jobs-right div.experience-line {
+  border-color: #848484;
+}
+
+.jobs-right p.resp-item {
+  font-size: .9rem;
+  margin: 1rem 0 1rem 0;
+  border-left: 1px solid #f7c089;
+  padding-left: 1rem;
+}
+
 .projects {
   display: flex;
   flex-direction: column;
@@ -501,6 +580,7 @@ color: #e6aa6e;
   display: flex;
   align-items: center;
   margin-bottom: 6rem;
+  width: 100%;
 }
 
 .project-info {
@@ -512,6 +592,12 @@ color: #e6aa6e;
 .proj-screen {
   max-height: 20rem;
   box-shadow: 0px 0px 100px -30px rgba(70, 70, 70, 0.701);
+  filter: opacity(.75) saturate(0%);
+  transition: filter .5s ease-in-out;
+}
+
+.proj-screen:hover {
+  filter: none
 }
 
 .project-title {
@@ -756,6 +842,10 @@ span.tool:hover {
 /* Mobile rules */
 
 @media (max-width: 480px) {
+  #top {
+    min-width: 100%;
+  }
+
 	.App {
     min-width: 100vw;
   }
@@ -808,6 +898,35 @@ span.tool:hover {
     color: #f7c089;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  #nav-about:after{
+    visibility: visible;
+    content: "me";
+  }
+
+  #nav-experience:after {
+    visibility: visible;
+    content: "exp";
+  }
+
+  #nav-projects:after{
+    visibility: visible;
+    content: "projs";
+  }
+
+  #nav-blogs:after{
+    visibility: visible;
+    content: "blogs";
+  }
+
+  #nav-contact:after{
+    visibility: visible;
+    content: "hmu";
   }
 
   .active {
@@ -937,6 +1056,41 @@ span.tool:hover {
     margin: 2%;
     transition: opacity 230ms;
   }
+  
+  .experience p {
+    font-size: .8rem;
+    font-weight: 350;
+  }
+  
+  .jobs-container {
+    margin-left: 2rem;
+  }
+  
+  .jobs-left {
+    width: 20vw;
+  }
+  
+  .jobs-left p {
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  .jobs-right {
+    width: 60vw;
+    min-height: 30rem;
+  }
+  
+  .experience p.title {
+    font-size: 1.2rem;
+  }
+  
+  .experience p.company span {
+    font-weight: normal;
+  }
+  
+  .jobs-right p.resp-item {
+    font-size: .9rem;
+  }
 
   .projects {
     display: flex;
@@ -956,19 +1110,15 @@ span.tool:hover {
     flex-direction: column;
     align-items: center;
     margin-top: 1.5rem;
-    width: 90vw;
+    width: 100%;
   }
 
   .project-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 99%;
+    width: 100vw;
     margin-bottom: 3rem;
-  }
-
-  .project-info {
-    min-width: 50%;
   }
 
   .proj-screen {
@@ -998,6 +1148,17 @@ span.tool:hover {
     padding-bottom: 10px;
     padding-top: 10px;
     line-height: 130%;
+  }
+
+  .QuickNote p{
+    font-size: .8rem;
+    color: #848484;
+    margin: 0px;
+    font-weight: 350;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    line-height: 130%;
+    width: 90vw;
   }
 
   .project-info a {

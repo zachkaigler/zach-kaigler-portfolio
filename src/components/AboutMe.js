@@ -15,6 +15,8 @@ import nodeIcon from '../images/node.png'
 import reduxIcon from '../images/redux.png'
 import sassIcon from '../images/sass.png'
 import expressIcon from '../images/express.png'
+import awsIcon from '../images/aws.png'
+import sbIcon from '../images/storybook.png'
 
 function AboutMe() {
     const [isMustacheVisible, setIsMustacheVisible] = useState(false)
@@ -52,9 +54,11 @@ function AboutMe() {
                             <img src={reactIcon} alt="react" title="React"/>
                             <img src={reduxIcon} alt="redux" title="Redux"/>
                             <img src={nodeIcon} alt="node" title="Node.js"/>
+                            <img src={awsIcon} alt="aws" title="Amazon Web Services"/>
                             <img src={expressIcon} alt="express" title="Express"/>
                             <img src={rubyIcon} alt="ruby" title="Ruby"/>
                             <img src={railsIcon} alt="rails" title="Rails"/>
+                            <img src={sbIcon} alt="storybook" title="Storybook.js"/>
                             <img src={sassIcon} alt="sass" title="Sass"/>
                             <img src={htmlIcon} alt="html" title="HTML"/>
                             <img src={cssIcon} alt="css" title="CSS"/>
