@@ -2,7 +2,7 @@ export const jobs = [
     {
         company: "sovaSage Inc.",
         title: "Software Engineer",
-        dates: "08/21 - 10/21",
+        dates: "08/21 - Present",
         responsibilities: [
             "Designed and built dynamic front-facing webpages using React and Material UI.",
             "Utilized Storybook.js to construct, organize, and test a stateful and interactive component based user interface.",
