@@ -5,7 +5,11 @@ function BlogCard({ title, image, url, date, content}) {
     const contentBlurb = content.split("<p>")[1].split(" ").map((word) => {
         if (counter < 30) {
             counter += 1
-            return word
+            if (word.includes("</p>")) {
+                return word.split("</p>")[0]
+            } else {
+                return word
+            }
         } else if (counter === 30) {
             counter += 1
             if (regEx.test(word[word.length - 1])) {
@@ -16,14 +20,18 @@ function BlogCard({ title, image, url, date, content}) {
         } else {
             return null
     }
-}).join(" ")
+    }).join(" ")
 
     return(
         <a href={url} target="_blank" rel="noreferrer" className="blog-card-a">
             <div className="blog-card">
-                <h3>{title}</h3>
+                <div className="blog-title">
+                    <h3>{title}</h3>
+                </div>    
                 <img src={image} alt="thumbnail"/>
-                <p className="blog-date">{date}</p>
+                <div className="blog-date-container">
+                    <p className="blog-date">{date}</p>
+                </div>
                 <p className="blog-blurb">{contentBlurb}</p>
             </div>
         </a>

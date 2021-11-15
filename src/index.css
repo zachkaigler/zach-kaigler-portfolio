@@ -781,7 +781,7 @@ span.tool:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   text-align: justify;
   width: 20rem;
   min-height: 30rem;
@@ -795,6 +795,27 @@ span.tool:hover {
   transition: background-color, 230ms;
 }
 
+.blog-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 4rem;
+  background-color: #e7e7e7;
+  width: 19rem;
+  border-radius: 5px 5px 0 0;
+}
+
+.blog-date-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 19rem;
+  background-color: #e7e7e7;
+  border-radius: 0 0 5px 5px ;
+}
+
 .blog-card:hover {
   background-color: #f5f5f5;
 }
@@ -803,6 +824,7 @@ span.tool:hover {
   text-align: center;
   font-weight: bold;
   font-size: 1.3rem;
+  color: #848484;
 }
 
 .blog-card p {
@@ -818,10 +840,15 @@ span.tool:hover {
 
 .blog-card p.blog-date {
   font-size: .9rem;
+  font-weight: bold;
 }
 
 .blog-card img {
   max-width: 19rem;
+}
+
+.blog-card p.blog-blurb {
+  width: 19rem;
 }
 
 .modal-bg {
