@@ -1,8 +1,19 @@
 export const jobs = [
     {
+        company: "ClearMix",
+        title: "Frontend Engineer I",
+        dates: "12/21 - Present",
+        responsibilities: [
+            "Leverage Next.js and React to build clean, easy to use, and client-friendly applications.",
+            "Work closely with a team of engineers and designers to deliver beautiful products from Figma protoypes to production code.",
+            "Implement Storybook.js to build and maintain a branded style library as well as multiple component based web apps.",
+            "Write and maintain Jest unit tests for frontend functionality."
+        ]
+    },
+    {
         company: "sovaSage Inc.",
         title: "Software Engineer",
-        dates: "08/21 - Present",
+        dates: "08/21 - 11/21",
         responsibilities: [
             "Designed and built dynamic front-facing webpages using React and Material UI.",
             "Utilized Storybook.js to construct, organize, and test a stateful and interactive component based user interface.",

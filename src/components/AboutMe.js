@@ -41,9 +41,12 @@ function AboutMe() {
                                 based work environments.
                             </p>
                             <p>
-                                A graduate of Flatiron School’s Software Engineering program,
-                                I seek to work on engaging projects in collaborative and
-                                friendly environments. <Link to="contact" className="inline-link" smooth={true} duration={1000}>Interested?</Link>
+                                Currently I'm working with <a href="https://www.clearmix.com/" target="_blank" rel="noreferrer" className="inline-link">ClearMix</a> to 
+                                develop tools built to help make video production easier
+                                and more accessible to the masses - and so at the moment I'm not looking
+                                for new opportunities. I am, however, always open to discussing interesting ideas! 
+                                Feel free to <Link to="contact" className="inline-link" smooth={true} duration={1000}>reach out </Link>
+                                if you want to talk shop.
                             </p>
                         </div>
                     </div>

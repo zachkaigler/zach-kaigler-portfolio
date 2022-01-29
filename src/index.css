@@ -509,7 +509,7 @@ color: #e6aa6e;
   padding: 1rem;
   width: 8rem;
   border-bottom: 1px solid white;
-  cursor: default;
+  cursor: pointer;
 }
 
 .jobs-left p:hover {
