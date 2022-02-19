@@ -1,4 +1,4 @@
-import resume from '../kaigler_resume_SE_2021.pdf'
+import resume from '../kaigler_resume_SE_2022.pdf'
 import ghIcon from '../images/github.png'
 import liIcon from '../images/linkedin.png'
 import igIcon from '../images/ig.png'
