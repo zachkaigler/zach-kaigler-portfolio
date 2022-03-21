@@ -844,6 +844,8 @@ span.tool:hover {
 
 .blog-card img {
   max-width: 19rem;
+  object-fit: cover;
+  height: 304px;
 }
 
 .blog-card p.blog-blurb {
