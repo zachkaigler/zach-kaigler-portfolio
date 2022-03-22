@@ -28,7 +28,9 @@ function BlogCard({ title, image, url, date, content}) {
                 <div className="blog-title">
                     <h3>{title}</h3>
                 </div>    
-                <img src={image} alt="thumbnail"/>
+                <div className="blog-thumb">
+                    <img src={image} alt="thumbnail"/>
+                </div>
                 <div className="blog-date-container">
                     <p className="blog-date">{date}</p>
                 </div>

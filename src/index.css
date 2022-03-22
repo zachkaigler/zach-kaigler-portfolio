@@ -842,6 +842,12 @@ span.tool:hover {
   font-weight: bold;
 }
 
+.blog-thumb {
+  height: fit-content;
+  max-height: 200px;
+  overflow-y: hidden;
+}
+
 .blog-card img {
   max-width: 19rem;
 }
