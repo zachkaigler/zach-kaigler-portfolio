@@ -842,10 +842,6 @@ span.tool:hover {
   font-weight: bold;
 }
 
-.blog-thumbnail-container {
-  height: 304px;
-}
-
 .blog-card img {
   max-width: 19rem;
 }
