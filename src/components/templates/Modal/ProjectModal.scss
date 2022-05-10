@@ -7,7 +7,10 @@ a {
 .ProjectModal {
   width: 30rem;
   max-height: 90vh;
-  overflow: scroll;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll; 
   margin: 2rem;
   border-radius: 4px;
   background-color: $white-transparent200ish;
@@ -20,6 +23,10 @@ a {
   color: $white-semiSolid;
   @include MainFont;
   @include transition-250ms-ease;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media screen and (max-width: $mobile) {
     width: 80vw;
