@@ -26,7 +26,7 @@ export const jobs = [
       title: "Editor/Assistant Editor",
       dates: "2015 - 2021",
       responsibilities: [
-          "Collaborated with clients from top creative agencies, representing high profile brands such as Apple Nike, and more, to deliver professional quality commercial edits for high budget campaigns in strict time frames. ",
+          "Collaborated with clients from top creative agencies, representing high profile brands such as Apple, Nike, and more, to deliver professional quality commercial edits for high budget campaigns in strict time frames. ",
           "Utilized a collection of technically demanding applications to deliver a complete final product - including Adobe Premiere, Adobe Photoshop, Adobe AfterEffects, and Avid Media Composer.",
       ]
   },
