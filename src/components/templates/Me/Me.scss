@@ -1,0 +1,174 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+.Me__Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include MainFont;
+}
+
+.Me__BioContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    flex-direction: column;
+  }
+}
+
+.Me__PicContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-right: 1rem;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    margin-right: 0;
+  }
+}
+
+.Me__Pic {
+  border-radius: 50%;
+  box-shadow: 0px 0px 100px -30px rgba(70, 70, 70, 0.701);
+  height: 22rem;
+  grid-area: 1 / 1 / 2 / 2;
+  @include transition-250ms-ease;
+  border: 3px solid $white-split;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    height: 16rem;
+  }
+}
+
+.Me__Mustache {
+  border-radius: 50%;
+  height: 22rem;
+  grid-area: 1 / 1 / 2 / 2;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    height: 16rem;
+  }
+}
+
+.Me__Bio {
+  @include MainFont;
+  font-size: $small;
+  color: $white-semiSolid;
+  width: 30rem;
+  padding: 1rem;
+  @include transition-250ms-ease;
+
+  p {
+    margin: 1rem 0;
+    line-height: 24px;
+    text-align: justify;
+    @include transition-250ms-ease;
+
+    @media screen and (max-width: calc($mobile + 100px)) {
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    font-size: $small-mobile;
+    width: 80vw;
+  }
+}
+
+.Me__BioHeader {
+  font-size: $medium;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  @include transition-250ms-ease;
+  @include text-3D($green-accent);
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    color: white;
+    @include text-3D($green-accent);
+    position: absolute;
+    font-size: $large-mobile;
+    @include tilt;
+    left: -1rem;
+    width: fit-content;
+  }
+}
+
+.Me__ToolsContainer {
+  width: 100%;
+  margin: 1rem 0;
+  @include transition-250ms-ease;
+  align-self: center;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    margin: 0;
+    width: 80vw;
+  }
+}
+
+.Me__ToolsHeader {
+  @include MainFont;
+  font-size: $mediumMini;
+  color: $white-semiSolid;
+  font-weight: 600;
+  text-align: center;
+  @include transition-250ms-ease;
+  margin: 1rem 0;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    font-size: $mediumMini-mobile;
+  }
+}
+
+.Me__Tools {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Me__Tools > * {
+  margin: 0 .5rem;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    margin: 0 .25rem;
+  }
+}
+
+.Me__ToolIcon svg {
+  width: 2.25rem;
+  height: 2.25rem;
+  fill: $white-semiSolid;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.Me__ToolIcon svg path {
+  fill: $white-semiSolid;
+}
+
+.Smaller svg {
+  width: 2rem;
+  height: 2rem;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}

@@ -1,0 +1,1 @@
+export const devAPI = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fzachkaigler.medium.com%2Ffeed';

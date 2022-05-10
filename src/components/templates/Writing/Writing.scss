@@ -1,0 +1,81 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+a {
+  text-decoration: none;
+}
+
+.Writing__Page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include transition-250ms-ease;
+  @include MainFont;
+}
+
+.Writing__CardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.Writing__CardContainer > * {
+  margin: .5rem;
+}
+
+.Writing__Medium svg {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 3rem;
+}
+
+.Writing__Medium svg path {
+  fill: $white-split;
+  @include transition-250ms-ease;
+
+  &:hover {
+    fill: $white-semiSolid;
+  }
+}
+
+.Writing__Loading svg {
+  width: 3rem;
+  height: 3rem;
+
+  path {
+    fill: $white-split;
+  }
+}
+
+.Writing__Error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Writing__ErrorHead {
+  @include MainFont;
+  color: $white-semiSolid;
+  @include text-3D($lime-accent);
+  font-size: $medium;
+  font-weight: 600;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $large-mobile;
+  }
+}
+
+.Writing__ErrorText {
+  @include MainFont;
+  color: $white-semiSolid;
+  font-size: $mediumMini;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $xsmall;
+  }
+}

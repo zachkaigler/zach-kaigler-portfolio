@@ -1,0 +1,121 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+.DetailTabber {
+  width: 75%;
+  height: 30%;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include Italic;
+}
+
+.DetailTabber__Header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $white-transparent;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.DetailTabber__Tab {
+  width: 100%;
+  padding: .25rem .1rem;
+  @include MainFont;
+  color: white;
+  font-size: $tiny;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: background-color 250ms ease;
+  -webkit-tap-highlight-color: transparent;
+
+  &.First {
+    border-top-left-radius: 4px;
+  }
+
+  &.Last {
+    border-top-right-radius: 4px;
+  }
+
+  &:hover {
+    background-color: $white-transparent400;
+  }
+
+  &.Active {
+    background-color: $white-split;
+
+    &:hover {
+      background-color: $white-transparent400;
+    }
+  }
+}
+
+.DetailTabber__Content {
+  height: 100%;
+  background-color: $white-transparent200ish;
+  padding: 1rem;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  min-height: 13rem;
+
+  @media screen and (max-width: $mobile) {
+    min-height: 22rem;
+  }
+}
+
+.DetailTabber__Company {
+  @include MainFont;
+  color: $white-semiSolid;
+  font-size: $mediumMini;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+.DetailTabber__TitleDate {
+  display: flex;
+  flex-direction: row;
+  @include MainFont;
+  color: $white-split;
+  font-size: $small;
+  margin-bottom: 1rem;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $small-mobile;
+    flex-direction: column;
+  }
+}
+
+.DetailTabber__Pipe {
+  margin: 0 .5rem;
+}
+
+.DetailTabber__Dates {
+  font-weight: 500;
+}
+
+.DetailTabber__Point {
+  @include MainFont;
+  color: $white-split;
+  font-size: $xsmall;
+  margin: .75rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $small-mobile;
+  }
+}
+
+.DetailTabber__Item {
+  margin-left: .5rem;
+}

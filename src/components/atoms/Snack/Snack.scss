@@ -1,0 +1,17 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+.Snack {
+  border-radius: 4px;
+  padding: .2rem .3rem;
+  border: 1px solid $white-transparent400;
+  color: $white-semiSolid;
+  background-color: $white-transparent200ish;
+  user-select: none;
+  font-size: $xsmall;
+  font-weight: 500;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $tiny;
+  }
+}

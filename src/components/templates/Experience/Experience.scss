@@ -1,0 +1,33 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.Experience__Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include MainFont;
+}
+
+.Experience__Tabber {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.Experience__ResumeLink {
+  padding: .5rem;
+  color: $white-semiSolid;
+  cursor: pointer;
+}

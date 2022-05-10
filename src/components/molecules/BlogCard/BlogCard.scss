@@ -1,0 +1,64 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.BlogCard {
+  width: 20rem;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white-transparent;
+  border-radius: 4px;
+  color: $white-semiSolid;
+  @include MainFont;
+  padding: 1rem;
+  cursor: pointer;
+  @include transition-250ms-ease;
+  -webkit-tap-highlight-color: transparent;
+  
+  &:hover {
+    background-color: $white-transparent200ish;
+    transform: scale(1.025) translateY(-2%);
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 70vw;
+  }
+}
+
+.BlogCard__Title {
+  font-size: $mediumMini;
+  user-select: none;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $mediumMini-mobile;
+  }
+}
+
+.BlogCard__Categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: .75rem 0;
+}
+
+.BlogCard__Categories > * {
+  margin: .1rem;
+}
+
+.BlogCard__Date {
+  user-select: none;
+  font-weight: 500;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $tiny;
+  }
+}

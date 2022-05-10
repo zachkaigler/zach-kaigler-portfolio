@@ -1,0 +1,27 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: white
+  }
+}
+
+.ErrorModal__Header {
+  @include text-3D($orange-accent);
+  @include MainFont;
+  font-size: $medium;
+  color: $white-semiSolid;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.ErrorModal__Body {
+  @include MainFont;
+  font-size: $small;
+  color: $white-semiSolid;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}

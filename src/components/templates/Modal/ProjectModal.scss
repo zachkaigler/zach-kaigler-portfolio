@@ -1,0 +1,101 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+a {
+  text-decoration: none;
+}
+
+.ProjectModal {
+  width: 30rem;
+  border-radius: 4px;
+  background-color: $white-transparent200ish;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 100px -30px rgba(70, 70, 70, 0.372);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  color: $white-semiSolid;
+  @include MainFont;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: $mobile) {
+    width: 80vw;
+  }
+}
+
+.ProjectModal__Close {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.ProjectModal__Title {
+  font-size: $medium;
+  font-weight: 600;
+  margin: .5rem 0 2rem 0;
+  @include text-3D($blue-accent);
+  @media screen and (max-width: $mobile) {
+    font-size: $medium;
+  }
+}
+
+.ProjectModal__Screenshot {
+  width: 70%;
+  border-radius: 4px;
+  opacity: .7;
+  transition: opacity 250ms ease;
+  border: 5px solid $white-semiSolid;
+  
+  &:hover {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: $mobile) {
+    border-width: 3px;
+  }
+}
+
+.ProjectModal__Desc {
+  font-size: $small;
+  font-weight: 500;
+  margin: 2rem 0;
+  width: 80%;
+  text-align: center;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $small-mobile;
+  }
+}
+
+.ProjectModal__Tools {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin-bottom: 2rem;
+}
+
+.ProjectModal__Tools > * {
+  margin: .2rem;
+}
+
+.ProjectModal__Links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+  color: $white-split;
+}
+
+.ProjectModal__Links > * {
+  cursor: pointer;
+  margin: 0 .5rem;
+  @include transition-250ms-ease;
+  
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &:hover {
+    color: $white-semiSolid;
+  }
+}

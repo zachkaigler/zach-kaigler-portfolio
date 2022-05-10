@@ -1,0 +1,57 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+.ProjectCard {
+  width: 20rem;
+  min-height: 6rem;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $white-transparent;
+  border-radius: 4px;
+  color: $white-semiSolid;
+  @include MainFont;
+  font-size: $mediumMini;
+  font-weight: 600;
+  padding: 1rem;
+  cursor: pointer;
+  @include transition-250ms-ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  
+  &:hover {
+    background-color: $white-transparent200ish;
+    transform: scale(1.025) translateY(-2%);
+  }
+
+  &:active {
+    transform: scale(.99) translateY(.5%);
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 70vw;
+    font-size: $medium-mobile;
+  }
+}
+
+.ProjectCard__Desc {
+  font-size: $xsmall;
+  font-weight: 500;
+  margin-top: .5rem;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $small-mobile;
+  }
+}
+
+.ProjectCard__Icon {
+  position: absolute;
+  padding-right: .5rem;
+  color: $white-semiSolid;
+  top: 0;
+  right: 0;
+}
+
+.ProjectCard__Icon > svg {
+  width: 1rem;
+}

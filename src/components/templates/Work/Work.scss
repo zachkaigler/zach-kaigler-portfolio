@@ -1,0 +1,58 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+.Work__Page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+
+  @include MainFont;
+}
+
+.Work__CardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+  min-height: 18rem;
+
+  @media screen and (max-width: $mobile) {
+    height: 60%;
+    display: block;
+  }
+}
+
+.Work__CardContainer > * {
+  margin: .5rem;
+}
+
+.Work__NavContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  justify-self: flex-end;
+}
+
+.Work__NavContainer > * {
+  margin: 0 1rem;
+}
+
+.Work__Prev,
+.Work__Next {
+  cursor: pointer;
+  color: $white-split;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    color: $white-semiSolid;
+  }
+
+  svg {
+    width: 1rem;
+  }
+}

@@ -1,0 +1,79 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+.Tooltip__Container {
+  display: flex;
+  position: relative;
+
+  &.right {
+    flex-direction: row;
+  }
+
+  &.bottom {
+    flex-direction: column;
+  }
+}
+
+.Tooltip__Inner {
+  display: flex;
+  z-index: -1;
+  position: absolute;
+  transition: all .25s ease;
+  opacity: 0;
+  left: 0;
+  top: 0;
+
+  &.right {
+    flex-direction: row;
+    top: 50%;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+
+  &.bottom {
+    flex-direction: column;
+    left: 50%;
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+}
+
+.Tooltip__Inner.right.Visible {
+  opacity: 1;
+  left: 3.5rem;
+}
+
+.Tooltip__Inner.bottom.Visible {
+  opacity: 1;
+  top: 3.5rem;
+}
+
+.Tooltip__PointLeft.Visible {
+  opacity: 1;
+  width: 0; 
+  height: 0; 
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+  border-right: 10px solid $white-transparent;
+  align-self: center;
+  justify-self: center;
+}
+
+.Tooltip__PointUp.Visible {
+  opacity: 1;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $white-transparent;
+  align-self: center;
+  justify-self: center;
+}
+
+.Tooltip {
+  background-color: $white-transparent;
+  padding: .75rem;
+  border-radius: 3px;
+
+  @include MainFont;
+  color: white;
+}
