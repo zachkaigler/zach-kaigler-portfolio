@@ -6,6 +6,9 @@ a {
 
 .ProjectModal {
   width: 30rem;
+  max-height: 90vh;
+  overflow: scroll;
+  margin: 2rem;
   border-radius: 4px;
   background-color: $white-transparent200ish;
   backdrop-filter: blur(10px);
