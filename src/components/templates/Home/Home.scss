@@ -26,6 +26,9 @@
 }
 
 .Home__Lead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   font-size: $large;
   color: $white-semiSolid;
   font-weight: 600;
@@ -33,7 +36,21 @@
   @include transition-250ms-ease;
   @include text-3D($red-accent);
 
+  &.NotChrome {
+    height: calc($large + 3.5rem);
+
+    @media screen and (max-width: $mobile) {
+      height: 8.5rem;
+    }
+  }
+
   &.Long {
+    &.NotChrome {
+      @media screen and (max-width: $mobile) {
+        height: calc($medium + 3.5rem);
+      }
+    }
+
     @media screen and (max-width: $mobile) {
       font-size: $medium;
     }

@@ -7,6 +7,8 @@ const Home = ({ animateOut }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const { hidden } = usePreventMobileFlicker();
 
+  const isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+
   const generateIntro = () => {
     if (introRef.current) return;
     const dict = {
@@ -34,7 +36,9 @@ const Home = ({ animateOut }) => {
 
   return (
     <div className={`Home__Page Float ${hidden ? 'Hidden' : ''}`}>
-      <h1 className={`Home__Lead vivify fadeInLeft ${animateOut  ? 'fadeOutRight' : ''} ${introRef.current.length >= 8 ? 'Long' : ''}`}>{introRef.current}</h1>
+      <h1 className={`Home__Lead vivify fadeInLeft ${animateOut  ? 'fadeOutRight' : ''} ${introRef.current.length >= 8 ? 'Long' : ''} ${!isChrome ? 'NotChrome' : ''}`}>
+        {introRef.current}
+      </h1>
       <h2 className={`Home__Sub Italic vivify fadeInLeft delay-100 ${animateOut ? 'fadeOutRight' : ''}`}>My name's Zach.</h2>
       <h2 className={`Home__Sub vivify fadeInLeft delay-200 ${animateOut ? 'fadeOutRight' : ''}`}>I'm a software engineer.</h2>
     </div>
