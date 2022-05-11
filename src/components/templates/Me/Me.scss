@@ -89,10 +89,12 @@
 
 .Me__BioHeader {
   font-size: $medium;
-  margin-bottom: 1.5rem;
   font-weight: 600;
   @include transition-250ms-ease;
   @include text-3D($green-accent);
+
+  height: calc($medium + 3.5rem);
+  margin-bottom: -2.5rem;
 
   @media screen and (max-width: calc($mobile + 100px)) {
     color: white;
@@ -102,6 +104,9 @@
     @include tilt;
     left: -1rem;
     width: fit-content;
+
+    height: calc($large-mobile + 3.5rem);
+    margin-bottom: -.2rem;
   }
 }
 
