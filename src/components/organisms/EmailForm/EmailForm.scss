@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   @include MainFont;
+  @include transition-250ms-ease;
 
   @media screen and (max-width: $mobile) {
     width: 80vw
@@ -53,6 +54,11 @@
   font-size: $small;
   font-weight: 600;
   color: $white-semiSolid;
+  @include transition-250ms-ease;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $small-mobile;
+  }
 }
 
 .EmailForm__Submit {
