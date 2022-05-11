@@ -1,5 +1,7 @@
 @import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
 
+@include hidden;
+
 .Me__Page {
   display: flex;
   flex-direction: column;

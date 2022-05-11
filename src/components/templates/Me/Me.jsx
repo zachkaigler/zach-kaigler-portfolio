@@ -5,12 +5,13 @@ import { FaNodeJs, FaSass } from 'react-icons/fa';
 import selfie from '../../../images/me.jpg';
 import mustacheGif from '../../../images/mustache.gif';
 import { data } from './Me.constants.jsx';
-import { useResponsiveLayout } from '../../../hooks';
+import { useResponsiveLayout, usePreventMobileFlicker } from '../../../hooks';
 import './Me.scss';
 
 const Me = ({ animateOut }) => {
   const [showMustache, setShowMustache] = useState(false);
   const { isDesktop } = useResponsiveLayout(700);
+  const { hidden } = usePreventMobileFlicker();
   const icons = {
     react: <ReactIcon />,
     redux: <SiRedux />,
@@ -25,9 +26,12 @@ const Me = ({ animateOut }) => {
   const makeSmaller = ['redux', 'typescript', 'nodejs', 'sass', 'storybook', 'figma', 'photoshop'];
 
   return (
-    <div className='Me__Page Float'>
+    <div className={`Me__Page Float ${hidden ? 'Hidden' : ''}`}>
       <div className={`Me__BioContainer ${isDesktop ? 'vivify fadeInLeft' : ''} ${animateOut ? 'fadeOutRight' : ''}`}>
-        <div className={`Me__PicContainer ${animateOut ? 'fadeOutRight' : ''} ${!isDesktop ? 'vivify fadeInLeft' : ''}`} onClick={() => setShowMustache(true)}>
+        <div
+          className={`Me__PicContainer ${animateOut ? 'fadeOutRight' : ''} ${!isDesktop ? 'vivify fadeInLeft' : ''}`}
+          onClick={() => setShowMustache(true)}
+        >
           {!isDesktop && <h2 className='Me__BioHeader'>This Guy</h2>}
           <img className='Me__Pic' src={selfie} alt='Me' />
           {showMustache && <img className='Me__Mustache' src={mustacheGif} alt='Mustache' />}

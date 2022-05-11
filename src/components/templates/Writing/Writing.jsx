@@ -4,6 +4,7 @@ import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { BsMedium } from 'react-icons/bs';
 import { BlogCard } from '../..';
 import { format } from 'date-fns';
+import { usePreventMobileFlicker } from '../../../hooks';
 import './Writing.scss';
 
 const Writing = ({ animateOut }) => {
@@ -11,6 +12,8 @@ const Writing = ({ animateOut }) => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
   const [loaded, setLoaded] = useState(false);
+
+  const { hidden } = usePreventMobileFlicker();
 
   useEffect(() => {
     setLoading(true);
@@ -33,7 +36,7 @@ const Writing = ({ animateOut }) => {
   const displayArr = blogs.filter((blog, i) => i < 3);
 
   return (
-    <div className='Writing__Page Float'>
+    <div className={`Writing__Page Float ${hidden ? 'Hidden' : ''}`}>
       <div className={`Writing__CardContainer vivify fadeInLeft ${animateOut  ? 'fadeOutRight' : ''}`}>
         {loading && (
           <div className='Writing__Loading'>

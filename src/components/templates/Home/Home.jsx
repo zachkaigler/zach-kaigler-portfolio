@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { usePreventMobileFlicker } from '../../../hooks';
 import './Home.scss';
 
 const Home = ({ animateOut }) => {
   const introRef = useRef();
   const [isLoaded, setIsLoaded] = useState(false);
+  const { hidden } = usePreventMobileFlicker();
 
   const generateIntro = () => {
     if (introRef.current) return;
@@ -31,7 +33,7 @@ const Home = ({ animateOut }) => {
   if (!isLoaded) return;
 
   return (
-    <div className='Home__Page Float'>
+    <div className={`Home__Page Float ${hidden ? 'Hidden' : ''}`}>
       <h1 className={`Home__Lead vivify fadeInLeft ${animateOut  ? 'fadeOutRight' : ''}`}>{introRef.current}</h1>
       <h2 className={`Home__Sub Italic vivify fadeInLeft delay-100 ${animateOut ? 'fadeOutRight' : ''}`}>My name's Zach.</h2>
       <h2 className={`Home__Sub vivify fadeInLeft delay-200 ${animateOut ? 'fadeOutRight' : ''}`}>I'm a software engineer.</h2>

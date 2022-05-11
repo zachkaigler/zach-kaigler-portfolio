@@ -3,12 +3,13 @@ import { projects } from './Work.constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { ProjectCard } from '../../molecules';
-import { useResponsiveLayout } from '../../../hooks';
+import { useResponsiveLayout, usePreventMobileFlicker } from '../../../hooks';
 import { Modal, ProjectModal } from '..';
 import './Work.scss';
 
 const Work = ({ animateOut }) => {
   const { isDesktop } = useResponsiveLayout(900);
+  const { hidden } = usePreventMobileFlicker();
 
   const [activeProject, setActiveProject] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
@@ -67,7 +68,7 @@ const Work = ({ animateOut }) => {
           <ProjectModal project={activeProject} handleClose={handleCloseModal} />
         </Modal>
       )}
-      <div className='Work__Page Float'>
+      <div className={`Work__Page Float ${hidden ? 'Hidden' : ''}`}>
         <div className={`Work__CardContainer vivify ${fadeOut === null ? 'fadeInLeft' : ''} ${animateOut  ? 'fadeOutRight' : ''} ${fadeOut ? 'fadeOut' : 'fadeIn'}`}>
           {displayArr.map((proj) => <ProjectCard project={proj} key={proj.name} handleClick={() => handleCardClick(proj)} />)}
         </div>
