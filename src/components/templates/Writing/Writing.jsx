@@ -49,7 +49,7 @@ const Writing = ({ animateOut }) => {
               key={blog.pubDate}
               title={blog.title}
               url={blog.link}
-              // date={format(new Date(blog.pubDate), 'M/d/y')}
+              date={format(new Date(blog.pubDate.replace(/-/g, "/")), 'M/d/y')}
               categories={blog.categories}
             />
           ))

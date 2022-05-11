@@ -1,6 +1,5 @@
 import React from 'react';
 import { Snack } from '../../atoms';
-import { isChrome } from './BlogCard.constants';
 import './BlogCard.scss';
 
 const BlogCard = ({ title, url, date, categories }) => (
@@ -12,7 +11,7 @@ const BlogCard = ({ title, url, date, categories }) => (
           {categories.map((cat) => <Snack key={cat} label={cat} />)}
         </div>
       )}
-      {/* <div className='BlogCard__Date'>{date}</div> */}
+      <div className='BlogCard__Date'>{date}</div>
     </div>
   </a>
 );

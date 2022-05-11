@@ -33,6 +33,12 @@
   @include transition-250ms-ease;
   @include text-3D($red-accent);
 
+  &.Long {
+    @media screen and (max-width: $mobile) {
+      font-size: $medium;
+    }
+  }
+
   @media screen and (max-width: $mobile) {
     font-size: 5rem;
   }
