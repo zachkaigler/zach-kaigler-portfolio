@@ -83,14 +83,18 @@ const EmailForm = () => {
             onChange={(e) => handleChange(e, setBody)}
             required
           />
-          <button
-            className='EmailForm__Submit'
-            type='submit'
-          >
-            {!waiting && !showCheck && <AiOutlineSend />}
-            {waiting && <FontAwesomeIcon icon={faCircleNotch} spin />}
-            {showCheck && <AiOutlineCheck />}
-          </button>
+          <div className='EmailForm__BottomRow'>
+            <span className='EmailForm__Email'>zjkaig@gmail.com</span>
+            <button
+              className='EmailForm__Submit'
+              type='submit'
+              disabled={waiting}
+            >
+              {!waiting && !showCheck && <AiOutlineSend />}
+              {waiting && <FontAwesomeIcon icon={faCircleNotch} spin />}
+              {showCheck && <AiOutlineCheck />}
+            </button>
+          </div>
         </form>
       </div>
     </>
