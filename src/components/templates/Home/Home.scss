@@ -38,6 +38,7 @@
 
   &.NotChrome {
     height: calc($large + 3.5rem);
+    margin-bottom: -.2rem;
 
     @media screen and (max-width: $mobile) {
       height: 8.5rem;
