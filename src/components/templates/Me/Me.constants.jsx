@@ -2,7 +2,7 @@ export const data = {
   bio: (
     <>
       <p>
-          Hello friends! My name is Zach Kaigler, and I’m Brooklyn based software engineer
+          Hello friends! My name is Zach Kaigler, and I’m a Brooklyn based software engineer
           with a passion for beautiful design and clean code.
       </p>
       <p>
