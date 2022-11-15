@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.c650bed8.css",
-    "main.js": "/static/js/main.c713f254.js",
+    "main.css": "/static/css/main.447f0271.css",
+    "main.js": "/static/js/main.9778a7b8.js",
     "static/media/proj-flexfox.png": "/static/media/proj-flexfox.d4e9a5dc7eb189404bb1.png",
     "static/media/proj-vinylboxd.png": "/static/media/proj-vinylboxd.e2839032dc58ac2563be.png",
     "static/media/proj-nextcpap.png": "/static/media/proj-nextcpap.e47e512215ab5c928efa.png",
     "static/media/proj-quicknote.png": "/static/media/proj-quicknote.fd9b8562665d02b52b87.png",
     "static/media/proj-gameon.png": "/static/media/proj-gameon.a45e3b810cec15fb0d0a.png",
-    "static/media/kaigler_resume_SE_2022.pdf": "/static/media/kaigler_resume_SE_2022.987d9736b2484db2a10a.pdf",
+    "static/media/kaigler_resume_SE_2022.pdf": "/static/media/kaigler_resume_SE_2022.5e7a50f6b178373b3f20.pdf",
     "static/media/me.jpg": "/static/media/me.05bc7275e330353cc5c2.jpg",
     "static/media/mustache.gif": "/static/media/mustache.1de7f5acd0fbda1a277e.gif",
     "index.html": "/index.html",
-    "main.c650bed8.css.map": "/static/css/main.c650bed8.css.map",
-    "main.c713f254.js.map": "/static/js/main.c713f254.js.map"
+    "main.447f0271.css.map": "/static/css/main.447f0271.css.map",
+    "main.9778a7b8.js.map": "/static/js/main.9778a7b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.c650bed8.css",
-    "static/js/main.c713f254.js"
+    "static/css/main.447f0271.css",
+    "static/js/main.9778a7b8.js"
   ]
 }
