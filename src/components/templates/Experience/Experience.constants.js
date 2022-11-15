@@ -1,13 +1,12 @@
 export const jobs = [
   {
       company: "ClearMix",
-      title: "Frontend Engineer I",
+      title: "Frontend Engineer",
       dates: "12/21 - Present",
       responsibilities: [
-          "Leverage Next.js and React to build clean, easy to use, and client-friendly applications.",
-          "Work closely with a team of engineers and designers to deliver beautiful products from Figma protoypes to production code.",
-          "Utilize Storybook.js to build and maintain a branded style library as well as multiple component based web apps.",
-          "Write and maintain Jest unit tests for frontend functionality."
+          "Frontend lead for ClearMix Projects platform. Planned and engineered a fully featured, folder tree based interface – including drag-n-drop functionality, media upload, and responsive design – returning lapsed accounts to the business by integrating their project planning needs into the platform and greatly increasing engagement.",
+          "Architected, developed, and maintained ClearMix’s flagship virtual studio application, facilitating remote communication and high quality video recordings stored locally and uploaded to the cloud in real time – lowering internal costs and increasing the company’s quarter over quarter revenue.",
+          "Contributed to development of the ClearMix Intros feature, allowing users to upload content to the platform and seamlessly preface it with personalized video introductions as well as track external engagement – creating product lead growth for ClearMix and driving both increased interest and new business for the company.",
       ]
   },
   {
@@ -15,7 +14,7 @@ export const jobs = [
       title: "Software Engineer",
       dates: "08/21 - 11/21",
       responsibilities: [
-          "Designed and built dynamic front-facing webpages using React and Material UI.",
+          "Designed and built dynamic front-facing webpages using React and Material UI, driving new business to the company and increasing revenue.",
           "Utilized Storybook.js to construct, organize, and test a stateful and interactive component based user interface.",
           "Wrote and maintained Jest unit tests for both frontend and backend functionality.",
           "Leveraged several AWS services–including Lambda, DynamoDB, Amplify, and SNS–to build functional application backends."
