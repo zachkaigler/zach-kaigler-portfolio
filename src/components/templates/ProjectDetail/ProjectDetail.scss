@@ -1,0 +1,309 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+$monitor-background: $white-transparent400;
+$stand-height: 7%;
+$base-height: 5%;
+$page-padding: 3vh;
+$drawer-handle-width: 5rem;
+$drawer-trans-time: 500ms;
+$drawer-open-width: 30rem;
+$content-spacing: 1rem;
+
+@keyframes pulse {
+  0% { color: $white-transparent400; }
+  50% { color: white; }
+  100% { color: $white-transparent400; }
+}
+
+@mixin animateDownFromHeight($ele-height, $duration, $timing-func) {
+  @keyframes bgAnimDown {
+    0% { top: calc(0% - $ele-height); }
+    100%   { top: 100% }
+  }
+  animation: bgAnimDown $duration $timing-func infinite;
+}
+
+@mixin animateUpFromHeight($ele-height, $duration, $timing-func) {
+  @keyframes bgAnimUp {
+    0% { bottom: calc(0% - $ele-height); }
+    100%   { bottom: 100% }
+  }
+  animation: bgAnimUp $duration $timing-func infinite;
+}
+
+$bg-circle-1-height: 70%;
+$bg-circle-2-height: 20%;
+
+.ProjectDetail__Page {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  @include MainFont;
+  background-color: $magenta-light;
+  background-image: linear-gradient(-45deg, $project-detail-bg-1, $project-detail-bg-2);
+  @include background-animation;
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    height: $bg-circle-1-height;
+    aspect-ratio: 1 / 1;
+    background-color: $white-transparent;
+    position: absolute;
+    right: -5rem;
+    border-radius: 50%;
+    filter: blur(20px);
+    @include animateDownFromHeight($bg-circle-1-height, 120s, linear);
+  }
+
+  &::before {
+    content: '';
+    height: $bg-circle-2-height;
+    aspect-ratio: 1 / 1;
+    background-color: $white-transparent200ish;
+    position: absolute;
+    right: -5rem;
+    border-radius: 50%;
+    filter: blur(13px);
+    @include animateUpFromHeight($bg-circle-2-height, 60s, linear);
+  }
+}
+
+.ProjectDetail__Drawer {
+  height: 100%;
+  width: $drawer-handle-width;
+  background-color: $white-transparent;
+  transition: width $drawer-trans-time ease-in-out, background-color 250ms ease-in-out;
+  position: relative;
+
+  &.Open {
+    width: $drawer-open-width;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &.Open {
+      width: 100vw;
+    }
+  }
+}
+
+.ProjectDetail__DrawerHandle {
+  width: $drawer-handle-width;
+  cursor: pointer;
+  background-color: $white-transparent;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: pulse 3s linear infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  webkit-box-shadow: -50px 0px 60px 30px $white-transparent;
+  -moz-box-shadow: -50px 0px 60px 30px $white-transparent;
+  box-shadow: -50px 0px 60px 30px $white-transparent;
+  transition: background-color 500ms ease, box-shadow 500ms ease, -moz-box-shadow 500ms ease, webkit-box-shadow, 500ms ease;
+  z-index: 5;
+
+  &:hover {
+    background-color: $white-transparent200ish;
+    webkit-box-shadow: -50px 0px 60px 30px $white-transparent200ish;
+    -moz-box-shadow: -50px 0px 60px 30px $white-transparent200ish;
+    box-shadow: -50px 0px 60px 30px $white-transparent200ish;
+  }
+}
+
+.ProjectDetail__DrawerContent {
+  height: 100%;
+  width: calc($drawer-open-width - $drawer-handle-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 $drawer-handle-width 0 $content-spacing;
+  overflow: hidden;
+  margin-left: calc(0rem - $drawer-open-width);
+  transition: margin-left $drawer-trans-time linear;
+  overflow-y: auto;
+
+  &.Open {
+    margin-left: 0;
+  }
+
+  @media screen and (max-height: $vertical) {
+    justify-content: flex-start;
+    padding-top: $content-spacing;
+  }
+
+  @media screen and (max-width: $mobile) {
+    &.Open {
+      width: calc(100vw - $drawer-handle-width);
+    }
+  }
+}
+
+.ProjectDetail__DrawerContentHeader {
+  font-size: $small;
+  font-weight: 700;
+  margin-bottom: $content-spacing;
+  color: $white-semiSolid;
+}
+
+.ProjectDetail__ProjectTitle {
+  font-size: $mediumMini;
+  margin-bottom: $content-spacing;
+  color: white;
+}
+
+.ProjectDetail__ProjectDesc {
+  font-size: $xsmall;
+  margin-bottom: $content-spacing;
+  color: white;
+  line-height: 1.25rem;
+}
+
+.ProjectDetail__SubHead {
+  font-size: $xsmall;
+  font-weight: 600;
+  margin-bottom: calc($content-spacing / 2);
+  color: $white-semiSolid;
+}
+
+.ProjectDetail__Main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ProjectDetail__VideoContainer {
+  padding: 3vh 5% 0 5%;
+  width: 115vh;
+  max-width: calc(100vw - $page-padding);
+  min-height: calc(100vh - $page-padding);
+  position: relative;
+  transition: opacity 500ms ease;
+
+  @media screen and (max-width: $mobile) {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.ProjectDetail__Monitor {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5% 3% 10% 3%;
+  background-image: linear-gradient(0deg, $monitor-background, $white-semiSolid);
+  position: relative;
+  backdrop-filter: blur(10px);
+  
+  &::before {
+    content: '';
+    width: 35%;
+    height: $stand-height;
+    position: absolute;
+    bottom: calc(0% - $stand-height);
+    backdrop-filter: blur(10px);
+    background-image: linear-gradient(0deg, $white-transparent, $white-transparent200ish);
+  }
+
+  &::after {
+    content: '';
+    background-color: $white-transparent;
+    width: 75%;
+    height: $base-height;
+    position: absolute;
+    bottom: calc(0% - $stand-height - $base-height);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    webkit-box-shadow: 0px 0px 50px 40px $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 50px 40px $white-transparent200ish;
+    box-shadow: 0px 0px 50px 40px $white-transparent200ish;
+  }
+  10% {
+    webkit-box-shadow: 0px 0px 48px 38px $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 48px 38px $white-transparent200ish;
+    box-shadow: 0px 0px 48px 38px $white-transparent200ish;
+  }
+  20% {
+    webkit-box-shadow: 0px 0px 62px 42px $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 62px 42px $white-transparent200ish;
+    box-shadow: 0px 0px 62px 42px $white-transparent200ish;
+  }
+  25% {
+    webkit-box-shadow: 0px 0px 60px 50px $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 60px 50px $white-transparent200ish;
+    box-shadow: 0px 0px 60px 50px $white-transparent200ish;
+  }
+  50% {
+    webkit-box-shadow: 0px 0px 55px 45px $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 55px 45px $white-transparent200ish;
+    box-shadow: 0px 0px 55px 45px $white-transparent200ish
+  }
+  75% {
+    webkit-box-shadow: 0px 0px 45px 35px $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 45px 35px $white-transparent200ish;
+    box-shadow: 0px 0px 45px 35px $white-transparent200ish
+  }
+  80% {
+    webkit-box-shadow: 0px 0px 52 42 $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 52 42 $white-transparent200ish;
+    box-shadow: 0px 0px 52 42 $white-transparent200ish
+  }
+  100% {
+    webkit-box-shadow: 0px 0px 50px 40px $white-transparent200ish;
+    -moz-box-shadow: 0px 0px 50px 40px $white-transparent200ish;
+    box-shadow: 0px 0px 50px 40px $white-transparent200ish;
+  }
+}
+
+.ProjectDetail__MonitorScreen {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  animation: flicker 1s infinite;
+}
+
+.Line {
+  width: 100%;
+  border-bottom: 1px solid $white-transparent200ish;
+  margin-bottom: $content-spacing;
+}
+
+.ProjectDetail__Bullet {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: .35rem;
+
+  span {
+    margin-right: calc($content-spacing / 2);
+  }
+}
+
+.ProjectDetail__Tools {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin-bottom: 2rem;
+}
+
+.ProjectDetail__Tools > * {
+  margin: .2rem;
+}

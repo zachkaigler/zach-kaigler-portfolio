@@ -12,7 +12,7 @@ export const jobs = [
   {
       company: "sovaSage",
       title: "Software Engineer",
-      dates: "08/21 - 11/21",
+      dates: "08/21 - 21/21",
       responsibilities: [
           "Designed and built dynamic front-facing webpages using React and Material UI, driving new business to the company and increasing revenue.",
           "Utilized Storybook.js to construct, organize, and test a stateful and interactive component based user interface.",

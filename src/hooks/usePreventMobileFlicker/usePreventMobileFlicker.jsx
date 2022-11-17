@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 
-const useResponsiveLayout = () => {
+const usePreventMobileFlicker = () => {
   const [hidden, setHidden] = useState(true);
   const timers = useMemo(() => [], []);
 
@@ -17,4 +17,4 @@ const useResponsiveLayout = () => {
   return { hidden };
 };
 
-export default useResponsiveLayout;
+export default usePreventMobileFlicker;

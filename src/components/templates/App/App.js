@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
@@ -19,6 +20,7 @@ import {
   Experience,
   Work,
   Writing,
+  ProjectDetail,
 } from '../../../components';
 import { useResponsiveLayout } from '../../../hooks';
 import './App.scss';
@@ -104,15 +106,26 @@ const App = () => {
     },
   }));
 
-  if (!isLoaded) return;
-
-  return (
+  const Main = () => (
     <div className={`App ${activePage}`}>
       <Nav actions={navActions} activePage={activePage} />
       <div className='Main'>
         {pages[activePage].component}
       </div>
     </div>
+  );
+
+  if (!isLoaded) return;
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/work/:project" element={<ProjectDetail />} />
+        {/* TODO: fun 404 page */}
+        <Route path="/*" element={<>not found</>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
