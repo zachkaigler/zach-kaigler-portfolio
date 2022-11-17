@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { projects } from './ProjectDetail.constants';
 import { Snack } from '../..';
 import { Error404 } from '..'
-import { useResponsiveLayout } from '../../../hooks';
+import { useResponsiveLayout, useNavigation } from '../../../hooks';
 import './ProjectDetail.scss';
 
 const ProjectDetail = () => {
@@ -13,14 +13,19 @@ const ProjectDetail = () => {
 
   const { isDesktop } = useResponsiveLayout(600);
 
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const { setActivePage } = useNavigation();
+
+  const [drawerOpen, setDrawerOpen] = useState(true);
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() => {
-    if (isDesktop) setDrawerOpen(true);
-  }, [isDesktop]);
-
   const selectedProject = projects[project];
+
+  const handleClickBack = () => {
+    setActivePage('Work');
+    navigate('/');
+  };
 
   if (!selectedProject) return <Error404 />;
 
@@ -35,7 +40,7 @@ const ProjectDetail = () => {
           tabIndex={0}
         >
           <FontAwesomeIcon
-            icon={faChevronRight}
+            icon={isDesktop ? faChevronRight : faChevronLeft}
             size="2x"
             style={{
               transform: drawerOpen ? 'rotate(180deg)' : '',
@@ -77,6 +82,15 @@ const ProjectDetail = () => {
           <div className='ProjectDetail__Tools'>
             {selectedProject.tools.map((tool) => <Snack label={tool} key={tool} />)}
           </div>
+        </div>
+        <div
+          className={`ProjectDetail__Back ${drawerOpen ? 'Open' : ''}`}
+          onClick={handleClickBack}
+          onKeyDown={handleClickBack}
+          role="button"
+          tabIndex={0}
+        >
+          Back to Main
         </div>
       </div>
       <div className='ProjectDetail__Main'>

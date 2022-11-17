@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { projects } from './Work.constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +11,7 @@ import './Work.scss';
 const Work = ({ animateOut }) => {
   const { isDesktop } = useResponsiveLayout(900);
   const { hidden } = usePreventMobileFlicker();
+  const navigate = useNavigate();
 
   const [activeProject, setActiveProject] = useState({});
   const [modalOpen, setModalOpen] = useState(false);
@@ -55,6 +57,9 @@ const Work = ({ animateOut }) => {
   };
 
   const handleCardClick = (proj) => {
+    if (proj.path) {
+      return navigate(proj.path);
+    }
     setActiveProject(proj);
     setModalOpen(true);
   };
@@ -70,7 +75,9 @@ const Work = ({ animateOut }) => {
       )}
       <div className={`Work__Page Float ${hidden ? 'Hidden' : ''}`}>
         <div className={`Work__CardContainer vivify ${fadeOut === null ? 'fadeInLeft' : ''} ${animateOut  ? 'fadeOutRight' : ''} ${fadeOut ? 'fadeOut' : 'fadeIn'}`}>
-          {displayArr.map((proj) => <ProjectCard project={proj} key={proj.name} handleClick={() => handleCardClick(proj)} />)}
+          {displayArr.map((proj) => (
+            <ProjectCard project={proj} key={proj.name} handleClick={() => handleCardClick(proj)} />
+          ))}
         </div>
         {!(displayArr.length >= projects.length) && (
           <div className={`Work__NavContainer vivify fadeInLeft delay-100 ${animateOut  ? 'fadeOutRight' : ''}`}>

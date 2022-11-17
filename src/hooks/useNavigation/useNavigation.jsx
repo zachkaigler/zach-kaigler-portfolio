@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState, createContext, useContext, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHouse,
@@ -13,23 +12,39 @@ import {
   faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import {
-  Nav,
   Home,
   Me,
   Contact,
   Experience,
   Work,
   Writing,
-  ProjectDetail,
-  Error404,
-} from '../../../components';
-import { useResponsiveLayout } from '../../../hooks';
-import './App.scss';
+} from '../../components';
+import { useResponsiveLayout } from '../useResponsiveLayout';
 
-const Main = () => {
-  const iconRef = useRef();
+const NavigationContext = createContext(undefined);
+
+export const NavigationProvider = ({ children }) => {
   const [animateOut, setAnimateOut] = useState(false);
-  const { isDesktop } = useResponsiveLayout(600);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const iconRef = useRef();
+
+  const generateRandomIcon = () => {
+    if (iconRef.current) return;
+    const dict = {
+      1: faUser,
+      2: faUserAstronaut,
+      3: faUserNinja,
+      4: faUserTie,
+    };
+    const num = Math.floor(Math.random() * Object.values(dict).length) + 1;
+    iconRef.current = dict[num];
+  };
+
+  useEffect(() => {
+    generateRandomIcon();
+    setIsLoaded(true);
+  }, [setIsLoaded]);
 
   const pages = {
     Home: {
@@ -65,24 +80,40 @@ const Main = () => {
   };
 
   const [activePage, setActivePage] = useState(pages.Home.label);
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  const generateRandomIcon = () => {
-    if (iconRef.current) return;
-    const dict = {
-      1: faUser,
-      2: faUserAstronaut,
-      3: faUserNinja,
-      4: faUserTie,
-    };
-    const num = Math.floor(Math.random() * Object.values(dict).length) + 1;
-    iconRef.current = dict[num];
-  };
+  return (
+    <NavigationContext.Provider
+      value={{
+        pages,
+        animateOut,
+        setAnimateOut,
+        activePage,
+        setActivePage,
+        isLoaded,
+        setIsLoaded,
+      }}
+    >
+      {children}
+    </NavigationContext.Provider>
+  );
+};
 
-  useEffect(() => {
-    generateRandomIcon();
-    setIsLoaded(true);
-  }, []);
+export const useNavigation = () => {
+  const context = useContext(NavigationContext);
+
+  if (!context) throw new Error('useNavigation must be called within a NavigationProvider');
+
+  const {
+    pages,
+    animateOut,
+    setAnimateOut,
+    activePage,
+    setActivePage,
+    isLoaded,
+    setIsLoaded,
+  } = context;
+
+  const { isDesktop } = useResponsiveLayout(600);
 
   const pageTransitionDelay = isDesktop ? 700 : 600;
   const timers = [];
@@ -107,26 +138,14 @@ const Main = () => {
     },
   }));
 
-  if (!isLoaded) return;
-
-  return (
-    <div className={`App ${activePage}`}>
-      <Nav actions={navActions} activePage={activePage} />
-      <div className='Main'>
-        {pages[activePage].component}
-      </div>
-    </div>
-  );
+  return {
+    pages,
+    animateOut,
+    setAnimateOut,
+    activePage,
+    setActivePage,
+    isLoaded,
+    setIsLoaded,
+    navActions,
+  };
 };
-
-const App = () => (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/work/:project" element={<ProjectDetail />} />
-        <Route path="/*" element={<Error404 />} />
-      </Routes>
-    </BrowserRouter>
-);
-
-export default App;
