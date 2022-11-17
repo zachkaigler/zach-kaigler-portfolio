@@ -21,11 +21,12 @@ import {
   Work,
   Writing,
   ProjectDetail,
+  Error404,
 } from '../../../components';
 import { useResponsiveLayout } from '../../../hooks';
 import './App.scss';
 
-const App = () => {
+const Main = () => {
   const iconRef = useRef();
   const [animateOut, setAnimateOut] = useState(false);
   const { isDesktop } = useResponsiveLayout(600);
@@ -106,7 +107,9 @@ const App = () => {
     },
   }));
 
-  const Main = () => (
+  if (!isLoaded) return;
+
+  return (
     <div className={`App ${activePage}`}>
       <Nav actions={navActions} activePage={activePage} />
       <div className='Main'>
@@ -114,19 +117,16 @@ const App = () => {
       </div>
     </div>
   );
+};
 
-  if (!isLoaded) return;
-
-  return (
+const App = () => (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/work/:project" element={<ProjectDetail />} />
-        {/* TODO: fun 404 page */}
-        <Route path="/*" element={<>not found</>} />
+        <Route path="/*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
-  );
-}
+);
 
 export default App;

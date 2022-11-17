@@ -6,4 +6,5 @@ export { Experience } from './Experience';
 export { Work } from './Work';
 export { Writing } from './Writing';
 export { ProjectDetail } from './ProjectDetail';
+export { Error404 } from './Error404';
 export * from './Modal';

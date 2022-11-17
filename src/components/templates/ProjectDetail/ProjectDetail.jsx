@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams } from 'react-router-dom';
 import { projects } from './ProjectDetail.constants';
 import { Snack } from '../..';
+import { Error404 } from '..'
 import { useResponsiveLayout } from '../../../hooks';
 import './ProjectDetail.scss';
 
@@ -21,8 +22,7 @@ const ProjectDetail = () => {
 
   const selectedProject = projects[project];
 
-  // TODO: make this fun
-  if (!selectedProject) return <>404</>;
+  if (!selectedProject) return <Error404 />;
 
   return (
     <div className='ProjectDetail__Page'>

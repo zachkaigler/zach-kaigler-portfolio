@@ -1,0 +1,62 @@
+@import 'src/styles/colors.scss', 'src/styles/typography.scss', 'src/styles/breakpoints.scss';
+
+.Error404__Page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $magenta-light;
+  background-image: linear-gradient(-45deg, $magenta-dark, $magenta-light);
+  overflow: hidden;
+
+  @include MainFont;
+}
+
+.Error404__Main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30%;
+}
+
+.Error404__Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: $xlarge;
+  color: $white-semiSolid;
+  font-weight: 700;
+  margin-bottom: 3rem;
+
+  span {
+    @include text-3D($magenta-light);
+    opacity: 0;
+    margin-top: -10rem;
+    transition: opacity 500ms ease, margin-top 500ms ease;
+
+    &.Loaded {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+}
+
+.Error404__SubHeader {
+  width: fit-content;
+  text-align: center;
+  color: $white-semiSolid;
+  font-size: $mediumMini;
+  transition: opacity 500ms ease, margin-left 500ms ease;
+  opacity: 0;
+  margin-left: -10rem;
+  line-height: 2.5rem;
+
+  &.Loaded {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
