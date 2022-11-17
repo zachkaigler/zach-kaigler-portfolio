@@ -103,6 +103,7 @@ $bg-circle-2-height: 20%;
   color: $white-transparent400;
   cursor: pointer;
   font-weight: 600;
+  z-index: 5;
 
   &:hover {
     color: $white-semiSolid
@@ -114,7 +115,7 @@ $bg-circle-2-height: 20%;
 
   @media screen and (max-width: $mobile) {
     &.Open {
-      width: 100vw;
+      width: calc(100vw - $drawer-handle-width + ($page-padding * 2));
     }
   }
 }
