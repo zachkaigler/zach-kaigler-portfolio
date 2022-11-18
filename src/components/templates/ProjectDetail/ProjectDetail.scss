@@ -76,7 +76,7 @@ $bg-circle-2-height: 20%;
   height: 100%;
   width: $drawer-handle-width;
   background-color: $white-transparent;
-  transition: width $drawer-trans-time ease-in-out, background-color 250ms ease-in-out;
+  transition: width $drawer-trans-time linear;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -86,6 +86,9 @@ $bg-circle-2-height: 20%;
   }
 
   @media screen and (max-width: $mobile) {
+    background-color: transparent;
+    width: 0;
+
     &.Open {
       width: 100vw;
     }
@@ -146,6 +149,15 @@ $bg-circle-2-height: 20%;
     webkit-box-shadow: -50px 0px 60px 30px $white-transparent200ish;
     -moz-box-shadow: -50px 0px 60px 30px $white-transparent200ish;
     box-shadow: -50px 0px 60px 30px $white-transparent200ish;
+  }
+
+  @media screen and (max-width: $mobile) {
+    right: $drawer-handle-width;
+    transition: right $drawer-trans-time linear;
+
+    &.Open {
+      right: 0;
+    }
   }
 }
 
@@ -208,6 +220,26 @@ $bg-circle-2-height: 20%;
   display: flex;
   justify-content: center;
   z-index: 5;
+  position: relative;
+}
+
+.ProjectDetail__MobileButton {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  padding: 10% 0;
+  color: $white-transparent400;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    color: $white-semiSolid;
+  }
 }
 
 .ProjectDetail__VideoContainer {

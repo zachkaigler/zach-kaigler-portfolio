@@ -33,7 +33,7 @@ const ProjectDetail = () => {
     <div className='ProjectDetail__Page'>
       <div className={`ProjectDetail__Drawer ${drawerOpen ? 'Open' : ''}`}>
         <div
-          className='ProjectDetail__DrawerHandle'
+          className={`ProjectDetail__DrawerHandle ${drawerOpen ? 'Open' : ''}`}
           onClick={() => setDrawerOpen(!drawerOpen)}
           onKeyDown={() => setDrawerOpen(!drawerOpen)}
           role="button"
@@ -115,6 +115,17 @@ const ProjectDetail = () => {
             </div>
           </div>
         </div>
+        {!isDesktop && (
+          <div
+            className='ProjectDetail__MobileButton'
+            onClick={() => setDrawerOpen(true)}
+            onKeyDown={() => setDrawerOpen(true)}
+            role="button"
+            tabIndex={0}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} size="2x" />
+          </div>
+        )}
       </div>
     </div>
   );
