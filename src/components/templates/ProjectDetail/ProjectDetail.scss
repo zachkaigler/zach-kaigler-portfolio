@@ -185,6 +185,8 @@ $bg-circle-2-height: 20%;
 
   @media screen and (max-width: $mobile) {
     width: calc(100vw - $drawer-handle-width);
+    justify-content: flex-start;
+    padding-top: $content-spacing;
   }
 }
 
