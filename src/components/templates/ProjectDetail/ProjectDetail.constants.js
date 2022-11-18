@@ -4,7 +4,7 @@ import introsDemo from '../../../videos/IntrosDemo.mp4';
 export const projects = {
   'clearmix-projects': {
     title: 'ClearMix Projects Platform',
-    description: 'A fully featured, folder tree based user interface designed to help users ideate and plan video marketing campaings, produce them through the ClearMix pipeline, and track them through completion.',
+    description: 'A fully featured, folder tree based user interface designed to help users ideate and plan video marketing campaigns, produce them through the ClearMix pipeline, and track them through completion.',
     video: projectsDemo,
     role: 'Lead Frontend Engineer',
     contributions: [
