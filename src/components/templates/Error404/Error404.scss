@@ -20,6 +20,10 @@
   justify-content: center;
   align-items: center;
   padding: 30%;
+
+  @media screen and (max-width: $mobile) {
+    padding: 5%;
+  }
 }
 
 .Error404__Header {
@@ -31,6 +35,10 @@
   color: $white-semiSolid;
   font-weight: 700;
   margin-bottom: 3rem;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $large;
+  }
 
   span {
     @include text-3D($magenta-light);
@@ -46,7 +54,7 @@
 }
 
 .Error404__SubHeader {
-  width: fit-content;
+  width: 90vw;
   text-align: center;
   color: $white-semiSolid;
   font-size: $mediumMini;
@@ -58,5 +66,10 @@
   &.Loaded {
     opacity: 1;
     margin-left: 0;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: $small;
+    line-height: 1.5rem;
   }
 }
