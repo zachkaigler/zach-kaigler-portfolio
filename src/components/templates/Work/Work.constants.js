@@ -7,7 +7,7 @@ import nextcpap from '../../../images/projectStills/proj-nextcpap.png'
 export const projects = [
   {
     name: "ClearMix Projects Platform",
-    desc: "Video marketing camping ideation and tracking platform.",
+    desc: "Video marketing campaign ideation and tracking platform.",
     path: "/work/clearmix-projects",
   },
   {
