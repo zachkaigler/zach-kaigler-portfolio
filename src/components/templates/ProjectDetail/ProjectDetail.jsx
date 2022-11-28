@@ -114,6 +114,8 @@ const ProjectDetail = () => {
               </video>
             </div>
           </div>
+          <div className='ProjectDetail__Stand' />
+          <div className='ProjectDetail__Base' />
         </div>
         {!isDesktop && (
           <div
