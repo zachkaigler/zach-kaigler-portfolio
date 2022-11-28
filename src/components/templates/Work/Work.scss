@@ -49,9 +49,16 @@
   cursor: pointer;
   color: $white-split;
   -webkit-tap-highlight-color: transparent;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background-color: $white-transparent;
+  border: 1px solid $white-transparent200ish;
+  transition: color 250ms ease, background-color 250ms ease, border 250ms ease;
 
   &:hover {
     color: $white-semiSolid;
+    background-color: $white-transparent200ish;
+    border: 1px solid $white-transparent400;
   }
 
   svg {

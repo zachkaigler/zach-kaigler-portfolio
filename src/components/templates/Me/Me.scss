@@ -9,6 +9,12 @@
   align-items: flex-start;
 
   @include MainFont;
+
+  @media screen and (max-width: calc($mobile + 100px)) {
+    justify-content: flex-start;
+    height: 100%;
+    padding-top: 10rem;
+  }
 }
 
 .Me__BioContainer {

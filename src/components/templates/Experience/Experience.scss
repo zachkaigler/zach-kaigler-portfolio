@@ -17,6 +17,12 @@ a {
   align-items: center;
   width: 100%;
   @include MainFont;
+
+  @media screen and (max-width: $mobile) {
+    justify-content: flex-start;
+    height: 100%;
+    padding-top: 8rem;
+  }
 }
 
 .Experience__Tabber {
@@ -30,6 +36,7 @@ a {
 
 .Experience__ResumeLink {
   padding: .5rem;
+  margin-bottom: 5rem;
   color: $white-semiSolid;
   cursor: pointer;
 }
