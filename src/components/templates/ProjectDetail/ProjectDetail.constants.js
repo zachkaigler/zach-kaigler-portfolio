@@ -1,5 +1,6 @@
 import projectsDemo from '../../../videos/ProjectsDemo.mp4';
 import introsDemo from '../../../videos/IntrosDemo.mp4';
+import studioDemo from '../../../videos/StudioDemo.mp4';
 
 export const projects = {
   'clearmix-projects': {
@@ -37,6 +38,28 @@ export const projects = {
       'TypeScript',
       'React.js',
       'React Context',
+      'AWS S3',
+      'Jest',
+      'React Testing Library',
+      'SASS',
+      'WebRTC',
+    ],
+  },
+  'clearmix-studio': {
+    title: 'ClearMix Virtual Studio',
+    description: 'A feature rich virtual recording platform built to make remote video production quick and pain-free.',
+    video: studioDemo,
+    role: 'Frontend Engineer',
+    contributions: [
+      'Developed suite of producer tools including the Notebook, allowing for the use of keyboard shortcuts for quick, integrated note-taking exported as Premiere Pro XML files',
+      "Contributed to application's upload functionality, requiring the recording of high quality footage stored locally and uploaded to AWS S3 in parallel",
+      'Completely refactored codebase and user interface from the ground up to bring to cleaner, more modern standards',
+    ],
+    tools: [
+      'TypeScript',
+      'React.js',
+      'React Context',
+      'Dailyjs',
       'AWS S3',
       'Jest',
       'React Testing Library',

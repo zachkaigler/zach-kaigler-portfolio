@@ -11,6 +11,11 @@ export const projects = [
     path: "/work/clearmix-projects",
   },
   {
+    name: "ClearMix Virtual Studio",
+    desc: "ClearMix's flagship recording studio platform.",
+    path: "/work/clearmix-studio",
+  },
+  {
     name: "ClearMix Intros",
     desc: "Personalized video introductions for user generated content made easy.",
     path: "/work/clearmix-intros",
