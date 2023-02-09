@@ -50,3 +50,16 @@ $light-grey: #cccccc;
   background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
+
+@keyframes button-pulse {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: $white-transparent;
+  }
+}
+
+@mixin button-pulse-animation {
+  animation: button-pulse 3s ease infinite;
+}

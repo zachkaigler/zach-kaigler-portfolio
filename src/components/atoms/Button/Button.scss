@@ -30,6 +30,10 @@
     background: linear-gradient(162deg, $white-transparent200ish 0%, rgba(255, 255, 255, 0.029) 100%);
   }
 
+  &.Highlight {
+    @include button-pulse-animation;
+  }
+
   .Button__Icon {
     transform: scale(1);
   }

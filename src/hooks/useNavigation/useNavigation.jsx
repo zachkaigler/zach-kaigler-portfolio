@@ -15,10 +15,10 @@ import {
   Home,
   Me,
   Contact,
-  Experience,
   Work,
   Writing,
 } from '../../components';
+import resume from '../../documents/kaigler_resume_SE_2022.pdf';
 import { useResponsiveLayout } from '../useResponsiveLayout';
 
 const NavigationContext = createContext(undefined);
@@ -57,11 +57,6 @@ export const NavigationProvider = ({ children }) => {
       component: <Me animateOut={animateOut} />,
       icon: <FontAwesomeIcon icon={iconRef.current} />,
     },
-    Experience: {
-      label: 'Experience',
-      component: <Experience animateOut={animateOut} />,
-      icon: <FontAwesomeIcon icon={faBriefcase} />,
-    },
     Work: {
       label: 'Work',
       component: <Work animateOut={animateOut} />,
@@ -76,6 +71,11 @@ export const NavigationProvider = ({ children }) => {
       label: 'Contact',
       component:  <Contact animateOut={animateOut} />,
       icon: <FontAwesomeIcon icon={faEnvelope} />,
+    },
+    Experience: {
+      label: 'Resume',
+      destination: resume,
+      icon: <FontAwesomeIcon icon={faBriefcase} />,
     },
   };
 
@@ -121,7 +121,9 @@ export const useNavigation = () => {
   const navActions = Object.values(pages).map((page, i) => ({
     ...page,
     id: i,
-    onClick: () => {
+    onClick: page.destination
+      ? () => window.open(page.destination, '_blank')
+      : () => {
       if (activePage === page.label) return;
       timers.forEach((timer) => {
         clearTimeout(timer);
