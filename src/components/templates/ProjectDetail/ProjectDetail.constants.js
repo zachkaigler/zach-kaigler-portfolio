@@ -10,7 +10,7 @@ export const projects = {
     role: 'Lead Frontend Engineer',
     contributions: [
       'Responsible for planning, delegation, and development of platform from the ground up',
-      'Archetected key platform features including drag-n-drop functionality, video upload, full project customization, account balance integration, and more',
+      'Architected key platform features including drag-n-drop functionality, video upload, full project customization, account balance integration, and more',
       'Developed custom wrapper hooks around React Query to allow for more performant data fetching, a DRYer codebase, and a friendlier dev experience',
     ],
     tools: [
