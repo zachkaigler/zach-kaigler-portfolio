@@ -4,12 +4,13 @@ export const data = {
       <p>
           Hello friends! My name is Zach Kaigler, and I’m a Brooklyn based software engineer
           with a passion for beautiful design and years of experience pushing production
-          code. I've worked across several industries including advertising, healthcare, and 
-          video tech, alongside contract work designing and building individual web experiences.
+          code.
       </p>
       <p>
-          I'm currently open to both freelance web development work as well as full time engineering
-          opportunites, so feel free to reach out if you're interested in working together! 
+          I'm currently working with Glen Lake Pioneering to help companies transform their
+          ideas into fantastic products, and so I'm not currently looking for new opportunites.
+          I am, however, always up for talking shop! Please feel free to reach out with any thoughts,
+          questions, or Magic: The Gathering deck ideas.
       </p>
     </>
   )
