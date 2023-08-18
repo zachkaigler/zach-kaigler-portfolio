@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projects } from './ProjectDetail.constants';
@@ -54,6 +54,18 @@ const ProjectDetail = () => {
           </p>
           <p className='ProjectDetail__ProjectTitle'>
             {selectedProject.title}
+            {selectedProject.link && (
+              <a
+                href={selectedProject.link}
+                target='blank'
+                rel='noreferrer'
+              >
+                <FontAwesomeIcon
+                  icon={faArrowUpRightFromSquare}
+                  cursor='pointer'
+                />
+              </a>
+            )}
           </p>
           <div className='Line' />
           <div className='ProjectDetail__ProjectDesc'>

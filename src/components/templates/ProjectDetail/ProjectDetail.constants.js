@@ -1,8 +1,31 @@
 import projectsDemo from '../../../videos/ProjectsDemo.mp4';
 import introsDemo from '../../../videos/IntrosDemo.mp4';
 import studioDemo from '../../../videos/StudioDemo.mp4';
+import chessDemo from '../../../videos/Chess2Demo.mp4';
 
 export const projects = {
+  'chess-2': {
+    title: 'Chess 2',
+    description: 'A fast paced chess variant with unique rules: No turns, piece cooldown, and direct capture of the King to win. Online multiplayer supported.',
+    video: chessDemo,
+    role: 'Lead Engineer + Lead Designer',
+    contributions: [
+      'Designed application UI/UX from the ground up, including an entirely custom component library and fully original graphics',
+      'Architected custom framework facilitating fast and live player to player connections for quick, responsive games',
+      'Manage complete production environment and scope across both ends of the stack',
+    ],
+    tools: [
+      'Javascript',
+      'React.js',
+      'React Context',
+      'Firebase',
+      'SASS',
+      'Photoshop',
+      'Procreate',
+      'Figma',
+    ],
+    link: 'https://playchess2.netlify.app/',
+  },
   'clearmix-projects': {
     title: 'ClearMix Projects Platform',
     description: 'A fully featured, folder tree based user interface designed to help users ideate and plan video marketing campaigns, produce them through the ClearMix pipeline, and track them through completion.',
