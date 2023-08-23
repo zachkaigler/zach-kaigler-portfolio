@@ -47,9 +47,4 @@
       transform: scale(.97);
     }
   }
-
-  @media screen and (max-width: $mobile) {
-    width: calc((100vw - 8rem) / 6);
-    height: calc((100vw - 8rem) / 6);
-  }
 }

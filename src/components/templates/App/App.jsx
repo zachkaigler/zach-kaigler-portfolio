@@ -13,16 +13,26 @@ const Main = () => {
     isLoaded,
     navActions,
     activePage,
+    nextBg,
     pages,
+    animateOut,
+    pageTransitionDelay,
   } = useNavigation();
 
   if (!isLoaded) return;
 
   return (
-    <div className={`App ${activePage}`}>
-      <Nav actions={navActions} activePage={activePage} />
-      <div className='Main'>
-        {pages[activePage].component}
+    <div className='App__Container'>
+      <div className={`App__BgNext ${nextBg}`}/>
+      <div
+        className={`App__BgCurrent ${activePage} ${animateOut ? 'hide' : ''}`}
+        style={{ transition: `opacity ${pageTransitionDelay + 500}ms ease` }}
+      />
+      <div className='App'>
+        <Nav actions={navActions} activePage={activePage} />
+        <div className='Main'>
+          {pages[activePage].component}
+        </div>
       </div>
     </div>
   );

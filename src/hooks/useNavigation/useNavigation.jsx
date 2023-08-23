@@ -80,6 +80,7 @@ export const NavigationProvider = ({ children }) => {
   };
 
   const [activePage, setActivePage] = useState(pages.Home.label);
+  const [nextBg, setNextBg] = useState(pages.Home.label);
 
   return (
     <NavigationContext.Provider
@@ -89,6 +90,8 @@ export const NavigationProvider = ({ children }) => {
         setAnimateOut,
         activePage,
         setActivePage,
+        nextBg,
+        setNextBg,
         isLoaded,
         setIsLoaded,
       }}
@@ -109,6 +112,8 @@ export const useNavigation = () => {
     setAnimateOut,
     activePage,
     setActivePage,
+    nextBg,
+    setNextBg,
     isLoaded,
     setIsLoaded,
   } = context;
@@ -125,6 +130,7 @@ export const useNavigation = () => {
       ? () => window.open(page.destination, '_blank')
       : () => {
       if (activePage === page.label) return;
+      setNextBg(page.label);
       timers.forEach((timer) => {
         clearTimeout(timer);
       });
@@ -146,8 +152,10 @@ export const useNavigation = () => {
     setAnimateOut,
     activePage,
     setActivePage,
+    nextBg,
     isLoaded,
     setIsLoaded,
     navActions,
+    pageTransitionDelay,
   };
 };
