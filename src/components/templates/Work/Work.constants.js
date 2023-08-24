@@ -44,7 +44,7 @@ export const projects = [
       "React", "Redux", "Nodejs", "Express", "Sass", "JWT", "bcrypt", "MongoDB", "react-spring", "Adobe Photoshop"
     ],
     video: null,
-    linkUrl: "https://quicknote-zk.netlify.app/",
+    linkUrl: null,
     githubUrl: "https://github.com/zachkaigler/quicknote-frontend"
   },
   {
