@@ -1,2 +1,22 @@
 $mobile: 600px;
 $vertical: 650px;
+
+@mixin breakpoint-styles {
+  @media screen and (max-height: $vertical) {
+    justify-content: flex-start;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: margin 250ms ease;
+    height: 100%;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media screen and (max-width: $mobile) {
+      margin-bottom: 10%;
+      height: unset;
+      padding: 10% 0;
+    }
+  }
+}

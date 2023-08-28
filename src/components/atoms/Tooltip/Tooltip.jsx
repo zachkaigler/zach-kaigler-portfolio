@@ -18,6 +18,7 @@ const Tooltip = ({ children, label, orientation = 'right' }) => {
         <div className={`Tooltip ${orientation} ${isHovered ? 'Visible' : ''}`}>
           {label}
         </div>
+        {orientation === 'top' && <div className={`Tooltip__PointDown ${isHovered ? 'Visible' : ''}`} />}
       </div>
     </div>
   );

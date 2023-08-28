@@ -13,10 +13,16 @@ a {
   align-items: center;
 
   @include MainFont;
+  @include breakpoint-styles;
 
   @media screen and (max-width: $mobile) {
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  @media screen and (max-height: $vertical) {
+    align-items: flex-start;
+    padding: 2% 0;
   }
 }
 

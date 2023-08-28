@@ -3,6 +3,7 @@
 .Button {
   color: $white-semiSolid;
   background-color: transparent;
+  backdrop-filter: blur(10px);
   cursor: pointer;
   border: none;
   display: flex;

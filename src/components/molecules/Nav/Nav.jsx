@@ -31,11 +31,10 @@ const Nav = ({ actions, activePage }) => {
     <div className='Nav'>
       {actions.map((act) => (
         <div className={`Nav__Button ${renderStates[act.id] ? 'Visible' : ''}`} key={act.id}>
-          <Tooltip label={act.label} orientation={isDesktop ? 'right' : 'bottom'}>
+          <Tooltip label={act.label} orientation={isDesktop ? 'right' : 'top'}>
             <Button
               icon={act.icon}
               onClick={act.onClick}
-              orientation='right'
               isActive={act.label === activePage}
               highlight={!!act.destination}
             />
