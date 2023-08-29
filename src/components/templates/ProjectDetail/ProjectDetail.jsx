@@ -120,6 +120,7 @@ const ProjectDetail = () => {
                 autoPlay
                 loop
                 muted
+                playsInline
                 onCanPlay={() => setLoaded(true)}
               >
                 <source src={selectedProject.video} type="video/mp4" />
