@@ -6,11 +6,6 @@ import nextcpap from '../../../images/projectStills/proj-nextcpap.png'
 
 export const projects = [
   {
-    name: "Chess 2",
-    desc: "Turn-less, cooldown based chess variant supporting multiple players.",
-    path: "/work/chess-2",
-  },
-  {
     name: "ClearMix Projects Platform",
     desc: "Video marketing campaign ideation and tracking platform.",
     path: "/work/clearmix-projects",
@@ -24,6 +19,11 @@ export const projects = [
     name: "ClearMix Intros",
     desc: "Personalized video introductions for user generated content made easy.",
     path: "/work/clearmix-intros",
+  },
+  {
+    name: "Chess 2",
+    desc: "Turn-less, cooldown based chess variant supporting multiple players.",
+    path: "/work/chess-2",
   },
   {
     name: "NEXTcpap",
