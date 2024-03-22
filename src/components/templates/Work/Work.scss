@@ -21,15 +21,12 @@
   align-items: center;
   max-width: 80rem;
   min-height: 18rem;
+  column-gap: 1.95rem;
+  row-gap: 1.95rem;
 
   @media screen and (max-width: $mobile) {
     height: 50%;
-    display: block;
   }
-}
-
-.Work__CardContainer > * {
-  margin: .5rem;
 }
 
 .Work__NavContainer {

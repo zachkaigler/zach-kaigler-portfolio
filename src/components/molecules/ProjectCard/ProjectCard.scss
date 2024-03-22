@@ -57,6 +57,27 @@
   top: 0;
   right: 0;
   animation: glow 3s linear infinite;
+  transition: all 250ms ease;
+
+  &.Hovered {
+    top: -1.75rem;
+  }
+}
+
+.ProjectCard__Label {
+  position: absolute;
+  opacity: 0;
+  right: -100%;
+  top: 0.45rem;
+  transition: all 100ms ease;
+  font-size: $xsmall;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &.Show {
+    right: 1.75rem;
+    opacity: 1;
+  }
 }
 
 .ProjectCard__Icon > svg {
