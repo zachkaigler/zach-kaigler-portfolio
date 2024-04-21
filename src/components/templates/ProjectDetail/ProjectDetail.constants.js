@@ -2,8 +2,41 @@ import projectsDemo from '../../../videos/ProjectsDemo.mp4';
 import introsDemo from '../../../videos/IntrosDemo.mp4';
 import studioDemo from '../../../videos/StudioDemo.mp4';
 import chessDemo from '../../../videos/Chess2Demo.mp4';
+import jdxDemo from '../../../videos/jdx portfolio demo.mp4';
 
 export const projects = {
+  'joint-dx': {
+    title: 'JointDx',
+    description: 'An AI driven orthopedic decision aid designed to help medical professionals triage patients and recommend care pathways.',
+    video: jdxDemo,
+    role: 'Full Stack Development Lead',
+    contributions: [
+      'Oversaw end-to-end platform development and deployment across the TypeScript/Python/AWS stack, including authentication, permissions, media upload, system architecture, and more',
+      'Worked in close collaboration with clients and stakeholders to shape platform features, scope its development, and deliver the product MVP',
+      'Orchestrated comprehensive overhaul of legacy codebase, including full TypeScript migration, modernization for current best practices, and a complete dependency audit',
+    ],
+    tools: [
+      'TypeScript',
+      'Python',
+      'React',
+      'React Context',
+      'React Query',
+      'Material UI',
+      'FastAPI',
+      'AWS Cognito',
+      'AWS DynamoDB',
+      'AWS S3',
+      'AWS ECS',
+      'AWS EC2',
+      'AWS Lambda',
+      'AWS Amplify',
+      'Lottie',
+      'After Effects',
+      'Photoshop',
+      'Procreate',
+      'Figma',
+    ],
+  },
   'chess-2': {
     title: 'Chess 2',
     description: 'A fast paced chess variant with unique rules: No turns, piece cooldown, and direct capture of the King to win. Online multiplayer supported.',
@@ -15,8 +48,8 @@ export const projects = {
       'Manage complete production environment and scope across both ends of the stack',
     ],
     tools: [
-      'Javascript',
-      'React.js',
+      'TypeScript',
+      'React',
       'React Context',
       'React DnD',
       'Firebase',
@@ -40,7 +73,7 @@ export const projects = {
     tools: [
       'TypeScript',
       'Next.js',
-      'React.js',
+      'React',
       'React Query',
       'React Context',
       'React DnD',
@@ -61,7 +94,7 @@ export const projects = {
     ],
     tools: [
       'TypeScript',
-      'React.js',
+      'React',
       'React Context',
       'AWS S3',
       'Jest',
@@ -82,7 +115,7 @@ export const projects = {
     ],
     tools: [
       'TypeScript',
-      'React.js',
+      'React',
       'React Context',
       'Dailyjs',
       'AWS S3',

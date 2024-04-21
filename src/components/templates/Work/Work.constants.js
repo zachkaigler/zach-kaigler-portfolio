@@ -6,6 +6,11 @@ import nextcpap from '../../../images/projectStills/proj-nextcpap.png'
 
 export const projects = [
   {
+    name: "JointDx",
+    desc: "AI driven orthopedic triaging and x-ray analysis application.",
+    path: "/work/joint-dx",
+  },
+  {
     name: "ClearMix Projects Platform",
     desc: "Video marketing campaign ideation and tracking platform.",
     path: "/work/clearmix-projects",
