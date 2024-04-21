@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.8f053a4b.css",
-    "main.js": "/static/js/main.d0230509.js",
+    "main.css": "/static/css/main.1cc81198.css",
+    "main.js": "/static/js/main.a4600377.js",
+    "static/media/jdx portfolio demo.mp4": "/static/media/jdx portfolio demo.9981a8ccb25ae10f8542.mp4",
     "static/media/StudioDemo.mp4": "/static/media/StudioDemo.ab1e70faf35f0cbe76d3.mp4",
     "static/media/IntrosDemo.mp4": "/static/media/IntrosDemo.da477b568a627c1b043c.mp4",
     "static/media/ProjectsDemo.mp4": "/static/media/ProjectsDemo.d33c5921546b016b8adc.mp4",
@@ -15,11 +16,11 @@
     "static/media/kaigler_resume_2024.pdf": "/static/media/kaigler_resume_2024.b77b233f44025ed4654a.pdf",
     "static/media/mustache.gif": "/static/media/mustache.1de7f5acd0fbda1a277e.gif",
     "index.html": "/index.html",
-    "main.8f053a4b.css.map": "/static/css/main.8f053a4b.css.map",
-    "main.d0230509.js.map": "/static/js/main.d0230509.js.map"
+    "main.1cc81198.css.map": "/static/css/main.1cc81198.css.map",
+    "main.a4600377.js.map": "/static/js/main.a4600377.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f053a4b.css",
-    "static/js/main.d0230509.js"
+    "static/css/main.1cc81198.css",
+    "static/js/main.a4600377.js"
   ]
 }
