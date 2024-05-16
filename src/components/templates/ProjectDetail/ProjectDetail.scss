@@ -162,7 +162,6 @@ $bg-circle-2-height: 20%;
 }
 
 .ProjectDetail__DrawerContent {
-  height: 100%;
   width: calc($drawer-open-width - $drawer-handle-width);
   display: flex;
   flex-direction: column;
@@ -172,6 +171,8 @@ $bg-circle-2-height: 20%;
   overflow: hidden;
   overflow-y: auto;
   margin-left: calc(0rem - $drawer-open-width);
+  margin-top: auto;
+  margin-bottom: auto;
   transition: margin-left $drawer-trans-time linear;
 
   -ms-overflow-style: none;
