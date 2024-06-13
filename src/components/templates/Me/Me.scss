@@ -10,11 +10,6 @@
 
   @include MainFont;
 
-  @media screen and (max-width: calc($mobile + 100px)) {
-    align-self: flex-start;
-    padding: 10% 0 30vh 0;
-  }
-
   @media screen and (max-height: $vertical) {
     justify-content: flex-start;
     -ms-overflow-style: none;
@@ -43,6 +38,8 @@
 
   @media screen and (max-width: calc($mobile + 100px)) {
     flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 }
 
