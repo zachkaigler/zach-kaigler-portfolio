@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4e7edb2.css",
+    "main.css": "/static/css/main.10b96ec8.css",
     "main.js": "/static/js/main.a4600377.js",
     "static/media/jdx portfolio demo.mp4": "/static/media/jdx portfolio demo.9981a8ccb25ae10f8542.mp4",
     "static/media/StudioDemo.mp4": "/static/media/StudioDemo.ab1e70faf35f0cbe76d3.mp4",
@@ -16,11 +16,11 @@
     "static/media/kaigler_resume_2024.pdf": "/static/media/kaigler_resume_2024.b77b233f44025ed4654a.pdf",
     "static/media/mustache.gif": "/static/media/mustache.1de7f5acd0fbda1a277e.gif",
     "index.html": "/index.html",
-    "main.c4e7edb2.css.map": "/static/css/main.c4e7edb2.css.map",
+    "main.10b96ec8.css.map": "/static/css/main.10b96ec8.css.map",
     "main.a4600377.js.map": "/static/js/main.a4600377.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4e7edb2.css",
+    "static/css/main.10b96ec8.css",
     "static/js/main.a4600377.js"
   ]
 }
