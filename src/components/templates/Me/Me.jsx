@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ReactIcon, JSIcon, FigmaIcon } from '../..';
-import { SiTypescript, SiRedux, SiStorybook, SiAdobephotoshop } from 'react-icons/si';
-import { FaNodeJs, FaSass } from 'react-icons/fa';
+import { SiTypescript, SiRedux, SiStorybook, SiAdobephotoshop, SiTailwindcss } from 'react-icons/si';
+import { FaNodeJs, FaSass, FaAws } from 'react-icons/fa';
 import selfie from '../../../images/me.jpg';
 import mustacheGif from '../../../images/mustache.gif';
 import { data } from './Me.constants.jsx';
@@ -13,15 +13,17 @@ const Me = ({ animateOut }) => {
   const { isDesktop } = useResponsiveLayout(700);
   const { hidden } = usePreventMobileFlicker();
   const icons = {
+    typescript: <SiTypescript />,
+    javascript: <JSIcon />,
     react: <ReactIcon />,
     redux: <SiRedux />,
-    javascript: <JSIcon />,
-    typescript: <SiTypescript />,
     nodejs: <FaNodeJs />,
+    tailwind: <SiTailwindcss />,
     sass: <FaSass />,
     storybook: <SiStorybook />,
     figma: <FigmaIcon />,
     photoshop: <SiAdobephotoshop />,
+    aws: <FaAws />
   };
   const makeSmaller = ['redux', 'typescript', 'nodejs', 'sass', 'storybook', 'figma', 'photoshop'];
 

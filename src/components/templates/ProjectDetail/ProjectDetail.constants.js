@@ -12,7 +12,7 @@ export const projects = {
     role: 'Full Stack Development Lead',
     contributions: [
       'Oversaw end-to-end platform development and deployment across the TypeScript/Python/AWS stack, including authentication, permissions, media upload, system architecture, and more',
-      'Worked in close collaboration with clients and stakeholders to shape platform features, scope its development, and deliver the product MVP',
+      'Worked in close collaboration with clients and stakeholders to shape platform features, scope development, and deliver the product MVP',
       'Orchestrated comprehensive overhaul of legacy codebase, including full TypeScript migration, modernization for current best practices, and a complete dependency audit',
     ],
     tools: [
