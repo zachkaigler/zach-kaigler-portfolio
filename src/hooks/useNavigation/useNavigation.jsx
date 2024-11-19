@@ -18,7 +18,7 @@ import {
   Work,
   Writing,
 } from '../../components';
-import resume from '../../documents/kaigler_resume_2024.pdf';
+import resume from '../../documents/kaigler_resume_2025.pdf';
 import { useResponsiveLayout } from '../useResponsiveLayout';
 
 const NavigationContext = createContext(undefined);

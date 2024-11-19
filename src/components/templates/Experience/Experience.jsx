@@ -1,7 +1,7 @@
 import React from 'react';
 import { DetailTabber } from '../..';
 import { jobs } from './Experience.constants';
-import resume from '../../../documents/kaigler_resume_2024.pdf';
+import resume from '../../../documents/kaigler_resume_2025.pdf';
 import { usePreventMobileFlicker } from '../../../hooks';
 import './Experience.scss';
 
