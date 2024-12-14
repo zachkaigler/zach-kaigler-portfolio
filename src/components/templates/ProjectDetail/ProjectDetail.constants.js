@@ -3,8 +3,35 @@ import introsDemo from '../../../videos/IntrosDemo.mp4';
 import studioDemo from '../../../videos/StudioDemo.mp4';
 import chessDemo from '../../../videos/Chess2Demo.mp4';
 import jdxDemo from '../../../videos/jdx portfolio demo.mp4';
+import capsuleDemo from '../../../videos/capsuleDemo.mp4'
 
 export const projects = {
+  capsule: {
+    title: 'Capsule Studio 1.0',
+    description: 'AI driven video editing platform purpose built for enterprise teams - putting dynamic motion graphics, powerful collaboration tools, and pro video polish into the hands of anyone who can operate a text document.',
+    video: capsuleDemo,
+    role: 'Senior Software Engineer',
+    contributions: [
+      'Fast-tracked the launch of Capsule Studio from beta to 1.0, delivering multiple core product features (project sharing, video exports, advanced timeline UI/UX), perfecting UI polish, squashing bugs, and optimizing code quality under aggressive deadlines',
+      'Fielded critical feedback with rapid turnarounds to meet key enterprise customer needs, helping scale the company to 100+ accounts and driving substantial month-over-month growth',
+      'Championed multiple organizational initiatives from the ground up, including post-launch engineering retrospectives, improved internal product education practices, elevated code documentation standards, and revamping of team member onboarding eforts',
+    ],
+    tools: [
+      'TypeScript',
+      'NextJS',
+      'Redux',
+      'RTKQuery',
+      'Tailwind CSS',
+      'Radix UI',
+      'Framer Motion',
+      'shadcn',
+      'Payload CMS',
+      'GraphQL',
+      'WebRTC',
+      'Figma',
+    ],
+    hasAudio: true,
+  },
   'joint-dx': {
     title: 'JointDx',
     description: 'An AI driven orthopedic decision aid designed to help medical professionals triage patients and recommend care pathways.',

@@ -6,6 +6,11 @@ import nextcpap from '../../../images/projectStills/proj-nextcpap.png'
 
 export const projects = [
   {
+    name: "Capsule Studio 1.0",
+    desc: "Video editing platform purpose built for enterprise teams and collaboration.",
+    path: "/work/capsule",
+  },
+  {
     name: "JointDx",
     desc: "AI driven orthopedic triaging and x-ray analysis application.",
     path: "/work/joint-dx",

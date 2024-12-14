@@ -21,6 +21,7 @@ const ProjectDetail = () => {
   const [loaded, setLoaded] = useState(false);
 
   const selectedProject = projects[project];
+  const shouldAutoPlay = !selectedProject.hasAudio;
 
   const handleClickBack = () => {
     setActivePage('Work');
@@ -117,9 +118,9 @@ const ProjectDetail = () => {
               <video
                 width="100%"
                 height="100%"
-                autoPlay
+                autoPlay={shouldAutoPlay}
+                controls={!shouldAutoPlay}
                 loop
-                muted
                 playsInline
                 onCanPlay={() => setLoaded(true)}
               >
