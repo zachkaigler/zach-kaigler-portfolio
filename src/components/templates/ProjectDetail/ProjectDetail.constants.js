@@ -25,8 +25,6 @@ export const projects = {
       'Radix UI',
       'Framer Motion',
       'shadcn',
-      'Payload CMS',
-      'GraphQL',
       'WebRTC',
       'Figma',
     ],
